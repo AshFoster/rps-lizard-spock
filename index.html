@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome and Google Fonts Links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"  crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <h2 class="heading">
+        Rock Paper Scissors...
+        <br>
+        ...Lizard Spock!
+    </h2>
+
+    <div class="main-area">
+        <p class="after-turn-message">Paragraph to say who won after each turn.</p>
+        
+        <div class="game-animation-area">
+            <div class="player-selection"></div>
+            <div class="computer-selection"></div>
+        </div>
+
+        <div class="scores">Player Score: <span id="player-score"></span></div>
+        <div class="scores"><span id="computer-score"></span> :Computer Score</div>
+
+        <div class="icon-selection-area">
+            <i class="far fa-hand-rock"></i>
+            <i class="far fa-hand-paper"></i>
+            <i class="far fa-hand-scissors"></i>
+            <i class="far fa-hand-lizard"></i>
+            <i class="far fa-hand-spock"></i>
+        </div>
+    </div>
+
+    <footer>Rules etc.</footer>
+    
     
     <script src="assets/js/script.js"></script>
 </body>
