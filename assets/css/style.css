@@ -62,3 +62,15 @@ body {
     vertical-align: middle;
     line-height: 50px;
 }
+
+footer {
+    border-top: 1px solid black;
+}
+
+footer h3 {
+    text-decoration: underline;
+}
+
+#lizard-rules {
+    font-size: .8rem;
+}
