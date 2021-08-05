@@ -11,5 +11,37 @@ body {
 }
 
 .heading {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+.main-area {
+    padding: 1rem;
+}
+
+.after-turn-message {
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.game-animation-area {
+    padding: 1rem 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-animation-area p {
+    font-weight: bold;
+}
+
+.selections {
+    height: 42vmin;
+    width: 42vmin;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.scores-area {
+    font-weight: bold;
+    font-size: 2rem;
 }

@@ -22,12 +22,19 @@
         <p class="after-turn-message">Paragraph to say who won after each turn.</p>
         
         <div class="game-animation-area">
-            <div class="player-selection"></div>
-            <div class="computer-selection"></div>
+            <div class="player-area">
+                <div class="selections player-selection"></div>  
+                <p>Player</p>  
+            </div>
+            <div class="computer-area">
+                <div class="selections computer-selection"></div> 
+                <p>Computer</p>        
+            </div> 
         </div>
 
-        <div class="scores">Player Score: <span id="player-score"></span></div>
-        <div class="scores"><span id="computer-score"></span> :Computer Score</div>
+        <div class="scores-area">
+            <span id="player-score">0</span> - <span id="computer-score">0</span>
+        </div>
 
         <div class="icon-selection-area">
             <i class="far fa-hand-rock"></i>
