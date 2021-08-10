@@ -8,15 +8,21 @@
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .heading {
     font-size: 1.8rem;
-    padding: 1rem 0;
+    padding: 2vh 0;
 }
 
 .main-area {
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vh;
 }
 
 .after-turn-message {
@@ -25,7 +31,7 @@ body {
 }
 
 .game-animation-area {
-    padding: 1rem 0 0;
+    padding: 2vh 0 0;
     display: flex;
     justify-content: space-around;
 }
@@ -40,20 +46,20 @@ body {
 
 .selections {
     height: 42vw;
-    max-height: 150px;
+    max-height: 125px;
     width: 42vw;
-    max-width: 150px;
+    max-width: 125px;
     border-radius: 50%;
     border: 1px solid black;
+    /* border: 10px solid rgb(66, 136, 228);
+    background: rgb(34, 90, 243); */
     position: relative;
 }
 
 #player-image,
 #computer-image {
     width: 85%;
-    position: absolute;
-    bottom: 2vw;
-    right: 2vw;
+    margin: auto;
 }
 
 #player-image {
@@ -70,32 +76,51 @@ body {
 }
 
 .icon-selection-area {
-    margin: 2rem auto 1rem;
+    margin: 4vh 0 2vh;
     display: flex;
     justify-content: space-evenly;
 }
 
 .icon-selection-area i {
-    font-size: 30px;
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
-    line-height: 50px;
+    line-height: 40px;
 }
 
-footer {
-    border-top: 1px solid black;
+.rules-button {
+    width: 20%;
+    margin: 1rem auto;
+    padding: .5rem;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    color: #fff;
+    background-color: blue;
+    border-radius: 5px;
 }
 
-footer h3 {
-    text-decoration: underline;
+@media screen and (min-height: 350px) {  
+    .selections {
+        max-height: 150px;
+        max-width: 150px;
+    }
+
+    .icon-selection-area i {
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
 }
 
-#lizard-rules {
-    font-size: .8rem;
+@media screen and (min-height: 420px) {
+    body {
+        height: 100vh;
+    }
 }
 
 @media screen and (min-height: 420px) and (min-width: 750px) {
