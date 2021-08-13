@@ -24,20 +24,21 @@ body {
     justify-content: space-around;
 }
 
-.main-menu-area button {
-    margin: 4vh auto;
-    width: 70%;
-    min-width: 270px;
-    font-size: 1.5rem;
-    padding: 3vh 0;
-    border-radius: 15px;
-    border: 2px solid black;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
-
+.main-menu-area button,
 .difficulty-area {
     margin: 4vh auto;
+    width: 70%;
+    max-width: 600px;
+    min-width: 270px;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 3vh 0;
+}
+
+.main-menu-area button {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
 .main-area {
