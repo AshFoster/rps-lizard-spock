@@ -41,6 +41,55 @@ body {
     font-weight: 700;
 }
 
+/* CREDIT STARTS - The idea for the toggle switch came from Self Teach Me's YouTube video - https://www.youtube.com/watch?v=LVPmYBgBdeM - I restyled and adapted it to make it work for this project. */
+.difficulty-toggle {
+    background: #efefef;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    display: flex;
+    padding: 1rem 0;
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.difficulty-toggle label {
+    width: 50%;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.selector {
+    height: 90%;
+    width: 50%;
+    background: blue;
+    border-radius: 30px;
+    position: absolute;
+    top: 5%;
+    left: .5%;
+    z-index: 2;
+    transition: all 0.25s ease-in-out;
+}
+
+input[type="radio"]:checked + label {
+    color: white;
+}
+
+#radio-easy:checked ~ .selector {
+    left: .5%;
+}
+
+#radio-hard:checked ~ .selector {
+    left: 49.5%;
+}
+/* END OF CREDIT */
+
 .main-area {
     display: flex;
     flex-direction: column;
