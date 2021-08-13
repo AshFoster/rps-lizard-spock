@@ -118,6 +118,42 @@ body {
     /* display: none; */
 }
 
+.close {
+    color: #000;
+    float: right;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.rules-modal {
+    width: 80%;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5%;
+    border: 10px solid rgb(66, 136, 228);
+    border: 10px solid #008BF8;
+    background: rgb(34, 90, 243);
+    color: #F1EDFF;
+}
+
+.rules-modal h3 {
+    text-decoration: underline;
+}
+
+#classic-rules,
+#lizard-rules {
+    margin: 2% auto;
+    padding-left: 2em;
+    text-align: left;
+    max-width: 250px;
+}
+
+.rules-modal p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 @media screen and (min-height: 350px) {  
     .selections {
         max-height: 150px;
