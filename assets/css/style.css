@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 2vh;
+    display: none;
 }
 
 .after-turn-message {
@@ -50,7 +51,6 @@ body {
     width: 42vw;
     max-width: 125px;
     border-radius: 50%;
-    /* border: 1px solid black; */
     border: 10px solid rgb(66, 136, 228);
     background: rgb(34, 90, 243);
     position: relative;
@@ -103,7 +103,8 @@ body {
     border-radius: 5px;
 }
 
-.modal-background {
+.home-modal-background,
+.rules-modal-background {
     position: fixed;
     top: 0;
     right: 0;
@@ -114,8 +115,14 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.home-modal-background {
     display: flex;
-    /* display: none; */
+}
+
+.rules-modal-background {
+    display: none;
 }
 
 .close {
@@ -125,7 +132,7 @@ body {
     font-weight: 600;
 }
 
-.rules-modal {
+.rules-modal-content {
     width: 80%;
     max-width: 300px;
     margin: auto;
@@ -135,6 +142,7 @@ body {
     border: 10px solid #008BF8;
     background: rgb(34, 90, 243);
     color: #F1EDFF;
+    /* display: none; */
 }
 
 .rules-modal h3 {
