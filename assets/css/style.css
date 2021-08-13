@@ -18,6 +18,28 @@ body {
     padding: 2vh 0;
 }
 
+.main-menu-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-menu-area button {
+    margin: 4vh auto;
+    width: 70%;
+    min-width: 270px;
+    font-size: 1.5rem;
+    padding: 3vh 0;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.difficulty-area {
+    margin: 4vh auto;
+}
+
 .main-area {
     display: flex;
     flex-direction: column;
