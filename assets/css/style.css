@@ -27,7 +27,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    display: none;
+    /* display: none; */
 }
 
 .main-menu-area button,
@@ -101,7 +101,7 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     justify-content: space-between;
     padding: 2vh;
-    /* display: none; */
+    display: none;
 }
 
 .after-turn-message {
