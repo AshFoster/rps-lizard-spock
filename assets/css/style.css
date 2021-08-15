@@ -195,10 +195,6 @@ input[type="radio"]:checked + label {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.home-modal-background {
-    display: flex;
-}
-
 .rules-modal-background {
     display: none;
 }
