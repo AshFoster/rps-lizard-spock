@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 endGame();
             } else {
                 let playerSelection = this.getAttribute("data-type");
-                alert(`You clicked ${playerSelection}`);
+                runGame(playerSelection);
             }
         });
     }
@@ -34,16 +34,20 @@ function showLizardSpock() {
     document.getElementsByClassName("main-area")[0].style.display = "flex";
 }
 
-function runGame() {
-
+function runGame(playerSelection) {
+    if (document.getElementById("classic-rules").style.display !== "none") {
+        playClassic(playerSelection);
+    } else {
+        playLizardSpock(playerSelection);
+    }
 }
 
-function playClassic() {
-
+function playClassic(playerSelection) {
+    alert(`You clicked ${playerSelection} in Classic`);
 }
 
-function playLizardSpock() {
-
+function playLizardSpock(playerSelection) {
+    alert(`You clicked ${playerSelection} in Lizard Spock`);
 }
 
 function showRules() {
