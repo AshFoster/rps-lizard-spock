@@ -203,11 +203,12 @@ input[type="radio"]:checked + label {
     display: none;
 }
 
-.close {
+.rules-close {
     color: #000;
     float: right;
     font-size: 30px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .rules-modal-content {
