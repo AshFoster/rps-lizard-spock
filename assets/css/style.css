@@ -14,6 +14,10 @@ body {
     /* background-color:#ffdc5d; */
 }
 
+h2 {
+    font-size: 1.2rem;
+}
+
 button {
     cursor: pointer;
 }
@@ -219,7 +223,7 @@ input[type="radio"]:checked + label {
     color: #F1EDFF;
 }
 
-.rules-modal h3 {
+.rules-modal h2 {
     text-decoration: underline;
 }
 
