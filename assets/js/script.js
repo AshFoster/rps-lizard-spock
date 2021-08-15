@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 showLizardSpock();
             } else if (this.getAttribute("data-type") === "rules") {
                 showRules();
+            } else if (this.getAttribute("data-type") === "quit") {
+                endGame();
             } else {
                 let playerSelection = this.getAttribute("data-type");
                 alert(`You clicked ${playerSelection}`);
@@ -72,5 +74,10 @@ function checkWinner() {
 }
 
 function endGame() {
-
+    document.getElementsByClassName("main-area")[0].style.display = "none";
+    document.getElementsByClassName("main-menu-area")[0].style.display = "flex";
+    document.getElementById("lizard-button").style.display = "inline-block";
+    document.getElementById("spock-button").style.display = "inline-block";
+    document.getElementById("classic-rules").style.display = "block";
+    document.getElementById("lizard-rules").style.display = "block";
 }
