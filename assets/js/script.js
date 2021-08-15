@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "lizard-spock") {
                 showLizardSpock();
             } else if (this.getAttribute("data-type") === "rules") {
-                alert("this will show rules modal");
+                showRules();
             } else {
                 let playerSelection = this.getAttribute("data-type");
                 alert(`You clicked ${playerSelection}`);
@@ -45,7 +45,18 @@ function playLizardSpock() {
 }
 
 function showRules() {
-
+    // CREDIT - Code for showing modal was taken from W3 Schools and adapted to fit this project
+    let modal = document.getElementsByClassName("rules-modal-background")[0];
+    var span = document.getElementsByClassName("rules-close")[0];
+    modal.style.display = "flex";
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 }
 
 function incrementPlayerScore() {
