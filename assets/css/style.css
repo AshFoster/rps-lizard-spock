@@ -220,7 +220,6 @@ input[type="radio"]:checked + label {
     border: 10px solid #008BF8;
     background: rgb(34, 90, 243);
     color: #F1EDFF;
-    /* display: none; */
 }
 
 .rules-modal h3 {
