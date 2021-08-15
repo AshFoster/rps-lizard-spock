@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "classic-version") {
                 showClassic();
-                alert("this will show classic");
             } else if (this.getAttribute("data-type") === "lizard-spock") {
-                alert("this will show lizard spock");
+                showLizardSpock();
             } else if (this.getAttribute("data-type") === "rules") {
                 alert("this will show rules modal");
             } else {
@@ -28,7 +27,9 @@ function showClassic() {
 }
 
 function showLizardSpock() {
-
+    document.getElementById("classic-rules").style.display = "none";
+    document.getElementsByClassName("main-menu-area")[0].style.display = "none";
+    document.getElementsByClassName("main-area")[0].style.display = "flex";
 }
 
 function runGame() {
