@@ -54,7 +54,13 @@ function playClassic(playerSelection, difficulty) {
 }
 
 function playLizardSpock(playerSelection, difficulty) {
-    alert(`You clicked ${playerSelection} in Lizard Spock. Difficulty: ${difficulty}`);
+    let lizardChoices = ["rock", "paper", "scissors", "lizard", "spock"];
+    if (difficulty === "easy") {
+        let computerSelection = lizardChoices[Math.floor(Math.random() * 5)];
+        checkWinner(playerSelection, computerSelection);
+    } else {
+        alert(`Difficulty: ${difficulty}`);
+    }
 }
 
 function showRules() {
