@@ -88,6 +88,33 @@ function incrementComputerScore() {
 
 function checkWinner(playerSelection, computerSelection) {
     alert(`${playerSelection} vs ${computerSelection}`);
+    if (playerSelection !== computerSelection) {
+        let rules = [
+            "rock crushes scissors",
+            "rock crushes lizard",
+            "paper covers rock",
+            "paper disproves spock",
+            "scissors cuts paper",
+            "scissors decapitate lizard",
+            "lizard eats paper",
+            "lizard poisons spock",
+            "spock vaporises rock",
+            "spock smashes scissors"
+        ];
+        for (i = 0; i < rules.length; i++) {
+            if (rules[i].indexOf(playerSelection) >= 0 && rules[i].indexOf(computerSelection) >= 0) {
+                if (rules[i].indexOf(playerSelection) === 0) {
+                    alert(`Player wins! ${rules[i]}`);
+                    incrementPlayerScore();
+                } else {
+                    alert(`Computer wins! ${rules[i]}`);
+                    incrementComputerScore();
+                }
+            }
+        }
+    } else {
+        alert("It's a draw!");
+    }
 }
 
 function endGame() {
