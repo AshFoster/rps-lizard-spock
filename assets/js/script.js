@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 endGame();
             } else {
                 let playerSelection = this.getAttribute("data-type");
-                runGame(playerSelection);
+                let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
+                runGame(playerSelection, difficulty.value);
             }
         });
     }
@@ -34,20 +35,20 @@ function showLizardSpock() {
     document.getElementsByClassName("main-area")[0].style.display = "flex";
 }
 
-function runGame(playerSelection) {
+function runGame(playerSelection, difficulty) {
     if (document.getElementById("classic-rules").style.display !== "none") {
-        playClassic(playerSelection);
+        playClassic(playerSelection, difficulty);
     } else {
-        playLizardSpock(playerSelection);
+        playLizardSpock(playerSelection, difficulty);
     }
 }
 
-function playClassic(playerSelection) {
-    alert(`You clicked ${playerSelection} in Classic`);
+function playClassic(playerSelection, difficulty) {
+    alert(`You clicked ${playerSelection} in Classic. Difficulty: ${difficulty}`);
 }
 
-function playLizardSpock(playerSelection) {
-    alert(`You clicked ${playerSelection} in Lizard Spock`);
+function playLizardSpock(playerSelection, difficulty) {
+    alert(`You clicked ${playerSelection} in Lizard Spock. Difficulty: ${difficulty}`);
 }
 
 function showRules() {
