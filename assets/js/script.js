@@ -47,7 +47,9 @@ function playClassic(playerSelection, difficulty) {
     let classicChoices = ["rock", "paper", "scissors"];
     if (difficulty === "easy") {
         let computerSelection = classicChoices[Math.floor(Math.random() * 3)];
-        checkWinner(playerSelection, computerSelection);
+        document.getElementById("player-image").src = `assets/images/${playerSelection}.png`
+        document.getElementById("computer-image").src = `assets/images/${computerSelection}.png`
+        // checkWinner(playerSelection, computerSelection);
     } else {
         alert(`Difficulty: ${difficulty}`);
     }
@@ -57,7 +59,9 @@ function playLizardSpock(playerSelection, difficulty) {
     let lizardChoices = ["rock", "paper", "scissors", "lizard", "spock"];
     if (difficulty === "easy") {
         let computerSelection = lizardChoices[Math.floor(Math.random() * 5)];
-        checkWinner(playerSelection, computerSelection);
+        document.getElementById("player-image").src = `assets/images/${playerSelection}.png`
+        document.getElementById("computer-image").src = `assets/images/${computerSelection}.png`
+        // checkWinner(playerSelection, computerSelection);
     } else {
         alert(`Difficulty: ${difficulty}`);
     }

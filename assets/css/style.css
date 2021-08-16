@@ -140,17 +140,17 @@ input[type="radio"]:checked + label {
 
 #player-image,
 #computer-image {
-    width: 85%;
-    height: 85%;
-    margin: auto;
+    width: 70%;
+    position: absolute;
+    bottom: 15%;
 }
 
 #player-image {
-    right: 2vw;
+    left: 12%;
 }
 
 #computer-image {
-    left: 2vw;
+    right: 12%;
 }
 
 .scores-area {
