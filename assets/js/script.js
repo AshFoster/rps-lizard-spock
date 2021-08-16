@@ -94,20 +94,20 @@ function checkWinner(playerSelection, computerSelection) {
     let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
     if (playerSelection !== computerSelection) {
         let rules = [
-            "rock crushes scissors",
-            "rock crushes lizard",
-            "paper covers rock",
-            "paper disproves spock",
-            "scissors cuts paper",
-            "scissors decapitate lizard",
-            "lizard eats paper",
-            "lizard poisons spock",
-            "spock vaporises rock",
-            "spock smashes scissors"
+            "Rock crushes Scissors",
+            "Rock crushes Lizard",
+            "Paper covers Rock",
+            "Paper disproves Spock",
+            "Scissors cuts Paper",
+            "Scissors decapitate Lizard",
+            "Lizard eats Paper",
+            "Lizard poisons Spock",
+            "Spock vaporises Rock",
+            "Spock smashes Scissors"
         ];
         for (i = 0; i < rules.length; i++) {
-            if (rules[i].indexOf(playerSelection) >= 0 && rules[i].indexOf(computerSelection) >= 0) {
-                if (rules[i].indexOf(playerSelection) === 0) {
+            if (rules[i].toLowerCase().indexOf(playerSelection) >= 0 && rules[i].toLowerCase().indexOf(computerSelection) >= 0) {
+                if (rules[i].toLowerCase().indexOf(playerSelection) === 0) {
                     afterTurnMessage.textContent = `Player wins! ${rules[i]}`
                     incrementPlayerScore();
                 } else {
