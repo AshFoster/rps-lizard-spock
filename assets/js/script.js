@@ -49,7 +49,7 @@ function playClassic(playerSelection, difficulty) {
         let computerSelection = classicChoices[Math.floor(Math.random() * 3)];
         document.getElementById("player-image").src = `assets/images/${playerSelection}.png`
         document.getElementById("computer-image").src = `assets/images/${computerSelection}.png`
-        // checkWinner(playerSelection, computerSelection);
+        checkWinner(playerSelection, computerSelection);
     } else {
         alert(`Difficulty: ${difficulty}`);
     }
@@ -61,7 +61,7 @@ function playLizardSpock(playerSelection, difficulty) {
         let computerSelection = lizardChoices[Math.floor(Math.random() * 5)];
         document.getElementById("player-image").src = `assets/images/${playerSelection}.png`
         document.getElementById("computer-image").src = `assets/images/${computerSelection}.png`
-        // checkWinner(playerSelection, computerSelection);
+        checkWinner(playerSelection, computerSelection);
     } else {
         alert(`Difficulty: ${difficulty}`);
     }
@@ -91,7 +91,7 @@ function incrementComputerScore() {
 }
 
 function checkWinner(playerSelection, computerSelection) {
-    alert(`${playerSelection} vs ${computerSelection}`);
+    let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
     if (playerSelection !== computerSelection) {
         let rules = [
             "rock crushes scissors",
@@ -108,16 +108,16 @@ function checkWinner(playerSelection, computerSelection) {
         for (i = 0; i < rules.length; i++) {
             if (rules[i].indexOf(playerSelection) >= 0 && rules[i].indexOf(computerSelection) >= 0) {
                 if (rules[i].indexOf(playerSelection) === 0) {
-                    alert(`Player wins! ${rules[i]}`);
+                    afterTurnMessage.textContent = `Player wins! ${rules[i]}`
                     incrementPlayerScore();
                 } else {
-                    alert(`Computer wins! ${rules[i]}`);
+                    afterTurnMessage.textContent = `Computer wins! ${rules[i]}`;
                     incrementComputerScore();
                 }
             }
         }
     } else {
-        alert("It's a draw!");
+        afterTurnMessage.textContent = "It's a draw!";
     }
 }
 
