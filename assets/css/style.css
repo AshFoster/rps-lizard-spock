@@ -141,6 +141,7 @@ input[type="radio"]:checked + label {
 #player-image,
 #computer-image {
     width: 85%;
+    height: 85%;
     margin: auto;
 }
 
