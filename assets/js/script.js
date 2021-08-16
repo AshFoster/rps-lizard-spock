@@ -44,7 +44,13 @@ function runGame(playerSelection, difficulty) {
 }
 
 function playClassic(playerSelection, difficulty) {
-    alert(`You clicked ${playerSelection} in Classic. Difficulty: ${difficulty}`);
+    let classicChoices = ["rock", "paper", "scissors"];
+    if (difficulty === "easy") {
+        let computerSelection = classicChoices[Math.floor(Math.random() * 3)];
+        checkWinner(playerSelection, computerSelection);
+    } else {
+        alert(`Difficulty: ${difficulty}`);
+    }
 }
 
 function playLizardSpock(playerSelection, difficulty) {
@@ -74,8 +80,8 @@ function incrementComputerScore() {
 
 }
 
-function checkWinner() {
-
+function checkWinner(playerSelection, computerSelection) {
+    alert(`${playerSelection} vs ${computerSelection}`);
 }
 
 function endGame() {
