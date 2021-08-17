@@ -51,9 +51,11 @@ function playClassic(playerSelection, difficulty) {
         let computerImage = document.getElementById("computer-image");
         playerImage.style.animation = "player-animation 2s ease";
         computerImage.style.animation = "computer-animation 2s ease";
-        playerImage.src = `assets/images/${playerSelection}.png`
-        computerImage.src = `assets/images/${computerSelection}.png`
-        checkWinner(playerSelection, computerSelection);
+        setTimeout(function() {
+            playerImage.src = `assets/images/${playerSelection}.png`
+            computerImage.src = `assets/images/${computerSelection}.png`
+            checkWinner(playerSelection, computerSelection);
+        }, 1800);
     } else {
         alert(`Difficulty: ${difficulty}`);
     }
