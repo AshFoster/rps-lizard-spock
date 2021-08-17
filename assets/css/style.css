@@ -150,6 +150,66 @@ input[type="radio"]:checked + label {
     right: 12%;
 }
 
+@keyframes player-animation {
+    0% {
+        transform: rotateY(180deg) translateY(0);
+    }
+    12.5% {
+        transform: rotateY(180deg) translateY(-50%);
+    }
+    25% {
+        transform: rotateY(180deg) translateY(0);
+    }
+    37.5% {
+        transform: rotateY(180deg) translateY(-50%);
+    }
+    50% {
+        transform: rotateY(180deg) translateY(0);
+    }
+    62.5% {
+        transform: rotateY(180deg) translateY(-50%);
+    }
+    75% {
+        transform: rotateY(180deg) translateY(0);
+    }
+    87.5% {
+        transform: rotateY(180deg) translateY(-50%);
+    }
+    100% {
+        transform: rotateY(180deg) translateY(0);
+    }
+}
+
+@keyframes computer-animation {
+    0% {
+        transform: translateY(0);
+    }
+    12.5% {
+        transform: translateY(-50%);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    37.5% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    62.5% {
+        transform: translateY(-50%);
+    }
+    75% {
+        transform: translateY(0);
+    }
+    87.5% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .scores-area {
     font-weight: bold;
     font-size: 2rem;

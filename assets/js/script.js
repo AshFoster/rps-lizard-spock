@@ -47,8 +47,12 @@ function playClassic(playerSelection, difficulty) {
     let classicChoices = ["rock", "paper", "scissors"];
     if (difficulty === "easy") {
         let computerSelection = classicChoices[Math.floor(Math.random() * 3)];
-        document.getElementById("player-image").src = `assets/images/${playerSelection}.png`
-        document.getElementById("computer-image").src = `assets/images/${computerSelection}.png`
+        let playerImage = document.getElementById("player-image");
+        let computerImage = document.getElementById("computer-image");
+        playerImage.style.animation = "player-animation 2s ease";
+        computerImage.style.animation = "computer-animation 2s ease";
+        playerImage.src = `assets/images/${playerSelection}.png`
+        computerImage.src = `assets/images/${computerSelection}.png`
         checkWinner(playerSelection, computerSelection);
     } else {
         alert(`Difficulty: ${difficulty}`);
