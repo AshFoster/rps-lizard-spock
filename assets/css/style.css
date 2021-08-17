@@ -123,10 +123,6 @@ input[type="radio"]:checked + label {
     font-weight: bold;
 }
 
-.player-area img {
-    transform: rotateY(180deg);
-}
-
 .selections {
     height: 42vw;
     max-height: 125px;
@@ -146,6 +142,7 @@ input[type="radio"]:checked + label {
 }
 
 #player-image {
+    transform: rotateY(180deg);
     left: 12%;
 }
 
@@ -192,7 +189,6 @@ input[type="radio"]:checked + label {
     border-radius: 5px;
 }
 
-.home-modal-background,
 .rules-modal-background {
     position: fixed;
     top: 0;
@@ -204,9 +200,6 @@ input[type="radio"]:checked + label {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.rules-modal-background {
     display: none;
 }
 
