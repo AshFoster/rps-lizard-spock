@@ -1,6 +1,7 @@
 // Add event listeners to all buttons after the DOM has finshed loading
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
+    let images = document.querySelectorAll(".game-animation-area img");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
@@ -17,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
                 runGame(playerSelection, difficulty.value);
             }
+        });
+    }
+
+    for (image of images) {
+        image.addEventListener("animationend", function() {
+            this.style.animation = "";
         });
     }
 });
