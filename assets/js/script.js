@@ -83,11 +83,15 @@ function showRules() {
 }
 
 function incrementPlayerScore() {
-
+    // CREDIT - increment score code is similar to code used in Code Institue's Love Maths project
+    let currentScore = parseInt(document.getElementById("player-score").textContent);
+    document.getElementById("player-score").textContent = ++currentScore;
 }
 
 function incrementComputerScore() {
-
+    // CREDIT - increment score code is similar to code used in Code Institue's Love Maths project
+    let currentScore = parseInt(document.getElementById("computer-score").textContent);
+    document.getElementById("computer-score").textContent = ++currentScore;
 }
 
 function checkWinner(playerSelection, computerSelection) {
