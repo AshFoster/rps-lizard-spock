@@ -43,43 +43,24 @@ function showLizardSpock() {
 }
 
 function runGame(playerSelection, difficulty) {
+    let gameChoices = ["rock", "paper", "scissors", "lizard", "spock"];
+    let playerImage = document.getElementById("player-image");
+    let computerImage = document.getElementById("computer-image");
+    let computerSelection;
     if (document.getElementById("classic-rules").style.display !== "none") {
-        playClassic(playerSelection, difficulty);
+        computerSelection = gameChoices[Math.floor(Math.random() * 3)];
     } else {
-        playLizardSpock(playerSelection, difficulty);
+        computerSelection = gameChoices[Math.floor(Math.random() * 5)];
     }
-}
-
-function playClassic(playerSelection, difficulty) {
-    let classicChoices = ["rock", "paper", "scissors"];
-    if (difficulty === "easy") {
-        let computerSelection = classicChoices[Math.floor(Math.random() * 3)];
-        let playerImage = document.getElementById("player-image");
-        let computerImage = document.getElementById("computer-image");
-        playerImage.src = "assets/images/rock.png"
-        computerImage.src = "assets/images/rock.png"
-        playerImage.style.animation = "player-animation 2s ease";
-        computerImage.style.animation = "computer-animation 2s ease";
-        setTimeout(function() {
-            playerImage.src = `assets/images/${playerSelection}.png`
-            computerImage.src = `assets/images/${computerSelection}.png`
-            checkWinner(playerSelection, computerSelection);
-        }, 1800);
-    } else {
-        alert(`Difficulty: ${difficulty}`);
-    }
-}
-
-function playLizardSpock(playerSelection, difficulty) {
-    let lizardChoices = ["rock", "paper", "scissors", "lizard", "spock"];
-    if (difficulty === "easy") {
-        let computerSelection = lizardChoices[Math.floor(Math.random() * 5)];
-        document.getElementById("player-image").src = `assets/images/${playerSelection}.png`
-        document.getElementById("computer-image").src = `assets/images/${computerSelection}.png`
+    playerImage.src = "assets/images/rock.png"
+    computerImage.src = "assets/images/rock.png"
+    playerImage.style.animation = "player-animation 2s ease";
+    computerImage.style.animation = "computer-animation 2s ease";
+    setTimeout(function() {
+        playerImage.src = `assets/images/${playerSelection}.png`
+        computerImage.src = `assets/images/${computerSelection}.png`
         checkWinner(playerSelection, computerSelection);
-    } else {
-        alert(`Difficulty: ${difficulty}`);
-    }
+    }, 1800);
 }
 
 function showRules() {
