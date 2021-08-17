@@ -43,14 +43,13 @@ function showLizardSpock() {
 }
 
 function runGame(playerSelection, difficulty) {
-    let gameChoices = ["rock", "paper", "scissors", "lizard", "spock"];
     let playerImage = document.getElementById("player-image");
     let computerImage = document.getElementById("computer-image");
     let computerSelection;
     if (document.getElementById("classic-rules").style.display !== "none") {
-        computerSelection = gameChoices[Math.floor(Math.random() * 3)];
+        computerSelection = selectionGenerator("classic", difficulty);
     } else {
-        computerSelection = gameChoices[Math.floor(Math.random() * 5)];
+        computerSelection = selectionGenerator("lizard", difficulty);
     }
     playerImage.src = "assets/images/rock.png"
     computerImage.src = "assets/images/rock.png"
@@ -75,6 +74,17 @@ function showRules() {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+}
+
+function selectionGenerator(gameType, difficulty) {
+    let gameChoices = ["rock", "paper", "scissors", "lizard", "spock"];
+    let numberOfChoices = (gameType === "classic") ? 3 : 5;
+    if (difficulty === "easy") {
+        return gameChoices[Math.floor(Math.random() * numberOfChoices)];
+    } else {
+        alert(`Difficulty: ${difficulty}`);
+        return gameChoices[0];
     }
 }
 
