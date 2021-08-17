@@ -56,6 +56,8 @@ function playClassic(playerSelection, difficulty) {
         let computerSelection = classicChoices[Math.floor(Math.random() * 3)];
         let playerImage = document.getElementById("player-image");
         let computerImage = document.getElementById("computer-image");
+        playerImage.src = "assets/images/rock.png"
+        computerImage.src = "assets/images/rock.png"
         playerImage.style.animation = "player-animation 2s ease";
         computerImage.style.animation = "computer-animation 2s ease";
         setTimeout(function() {
