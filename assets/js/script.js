@@ -100,8 +100,37 @@ function selectionGenerator(gameType, playerSelection, difficulty) {
     if (difficulty === "easy") {
         return gameChoices[Math.floor(Math.random() * numberOfChoices)];
     } else if (difficulty === "hard") {
-        alert(`Difficulty: ${difficulty}`);
-        return gameChoices[0];
+        let newChoices = [...gameChoices]; // Create new array of choices to splice below
+        let removedChoices = 0;
+        if (previousWinner === "player" || previousWinner === "computer") {
+            let random = Math.floor(Math.random() * 3) + 1; // Random number from 1 to 3
+            // run this section 2/3rds of the time
+            if (random !== 3) {
+                for (i = 0; i < numberOfChoices; i++) {
+                    if (newChoices[i] === previousPlayerSelection || newChoices[i] === previousComputerSelection) {
+                        newChoices.splice(i, 1); // Remove previous player or computer selection
+                        i--; // Used to account for removed value by going one iteration back
+                        removedChoices++; // Counts number of removed choices
+                    }
+                }
+                return newChoices[Math.floor(Math.random() * (numberOfChoices - removedChoices))];
+            } else { 
+            // run this section 1/3rd of the time
+                for (i = 0; i < rules.length; i++) {
+                    if (rules[i].toLowerCase().indexOf(playerSelection) > 0) {
+                        let beatsPlayer = rules[i].split(" ")[0].toLowerCase();
+                        newChoices.unshift(beatsPlayer);
+                    }
+                }
+                if (numberOfChoices === 3) {
+                    return newChoices[Math.floor(Math.random() * (numberOfChoices + 1)) + 1];
+                } else {
+                    return newChoices[Math.floor(Math.random() * (numberOfChoices + 2))];
+                }
+            } 
+        } else {
+            return gameChoices[Math.floor(Math.random() * numberOfChoices)];
+        }
     }
 }
 
@@ -130,7 +159,6 @@ function checkWinner(playerSelection, computerSelection) {
                 } else {
                     afterTurnMessage.textContent = `Computer wins! ${rules[i]}`;
                     incrementComputerScore();
-                    previousWinner = "computer";
                     previousComputerSelection = computerSelection;
                 }
             }
