@@ -1,3 +1,21 @@
+// Global Variables
+let gameChoices = ["rock", "paper", "scissors", "lizard", "spock"];
+let rules = [
+    "Rock crushes Scissors",
+    "Rock crushes Lizard",
+    "Paper covers Rock",
+    "Paper disproves Spock",
+    "Scissors cuts Paper",
+    "Scissors decapitate Lizard",
+    "Lizard eats Paper",
+    "Lizard poisons Spock",
+    "Spock vaporises Rock",
+    "Spock smashes Scissors"
+];
+let previousWinner = "";
+let previousPlayerSelection = "";
+let previousComputerSelection = "";
+
 // Add event listeners to all buttons after the DOM has finshed loading
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
@@ -47,9 +65,9 @@ function runGame(playerSelection, difficulty) {
     let computerImage = document.getElementById("computer-image");
     let computerSelection;
     if (document.getElementById("classic-rules").style.display !== "none") {
-        computerSelection = selectionGenerator("classic", difficulty);
+        computerSelection = selectionGenerator("classic", playerSelection, difficulty);
     } else {
-        computerSelection = selectionGenerator("lizard", difficulty);
+        computerSelection = selectionGenerator("lizard", playerSelection, difficulty);
     }
     playerImage.src = "assets/images/rock.png"
     computerImage.src = "assets/images/rock.png"
@@ -77,12 +95,11 @@ function showRules() {
     }
 }
 
-function selectionGenerator(gameType, difficulty) {
-    let gameChoices = ["rock", "paper", "scissors", "lizard", "spock"];
-    let numberOfChoices = (gameType === "classic") ? 3 : 5;
+function selectionGenerator(gameType, playerSelection, difficulty) {
+    let numberOfChoices = (gameType === "classic") ? 3 : 5; // 3 for classic and 5 for lizard spock
     if (difficulty === "easy") {
         return gameChoices[Math.floor(Math.random() * numberOfChoices)];
-    } else {
+    } else if (difficulty === "hard") {
         alert(`Difficulty: ${difficulty}`);
         return gameChoices[0];
     }
@@ -103,31 +120,24 @@ function incrementComputerScore() {
 function checkWinner(playerSelection, computerSelection) {
     let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
     if (playerSelection !== computerSelection) {
-        let rules = [
-            "Rock crushes Scissors",
-            "Rock crushes Lizard",
-            "Paper covers Rock",
-            "Paper disproves Spock",
-            "Scissors cuts Paper",
-            "Scissors decapitate Lizard",
-            "Lizard eats Paper",
-            "Lizard poisons Spock",
-            "Spock vaporises Rock",
-            "Spock smashes Scissors"
-        ];
         for (i = 0; i < rules.length; i++) {
             if (rules[i].toLowerCase().indexOf(playerSelection) >= 0 && rules[i].toLowerCase().indexOf(computerSelection) >= 0) {
                 if (rules[i].toLowerCase().indexOf(playerSelection) === 0) {
                     afterTurnMessage.textContent = `Player wins! ${rules[i]}`
                     incrementPlayerScore();
+                    previousWinner = "player";
+                    previousPlayerSelection = playerSelection;
                 } else {
                     afterTurnMessage.textContent = `Computer wins! ${rules[i]}`;
                     incrementComputerScore();
+                    previousWinner = "computer";
+                    previousComputerSelection = computerSelection;
                 }
             }
         }
     } else {
         afterTurnMessage.textContent = "It's a draw!";
+        previousWinner = "draw";
     }
 }
 
