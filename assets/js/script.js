@@ -42,6 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 let playerSelection = this.getAttribute("data-type");
                 let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
+                let icons = document.querySelectorAll(".icon-selection-area i");
+
+                // reset font awesome icons
+                for (icon of icons) {
+                    icon.classList.remove("fas");
+                    icon.classList.add("far");
+                }
+
+                // change selected font awesome icon 
+                this.firstElementChild.classList.remove("far");
+                this.firstElementChild.classList.add("fas");
+                
                 runGame(playerSelection, difficulty.value);
             }
         });
