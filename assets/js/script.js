@@ -159,6 +159,7 @@ function checkWinner(playerSelection, computerSelection) {
                 } else {
                     afterTurnMessage.textContent = `Computer wins! ${rules[i]}`;
                     incrementComputerScore();
+                    previousWinner = "computer";
                     previousComputerSelection = computerSelection;
                 }
             }
