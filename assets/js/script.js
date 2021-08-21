@@ -15,8 +15,11 @@ let rules = [
 let previousWinner = "";
 let previousPlayerSelection = "";
 let previousComputerSelection = "";
+let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
+let playerImage = document.getElementById("player-image");
+let computerImage = document.getElementById("computer-image");
 
 /* 
 Once the DOM has finshed loading add 'click' event listeners to all buttons and 'animationend' event
@@ -66,8 +69,6 @@ function showLizardSpock() {
 }
 
 function runGame(playerSelection, difficulty) {
-    let playerImage = document.getElementById("player-image");
-    let computerImage = document.getElementById("computer-image");
     let computerSelection;
 
     if (document.getElementById("classic-rules").style.display !== "none") {
@@ -85,7 +86,7 @@ function runGame(playerSelection, difficulty) {
         playerImage.src = `assets/images/${playerSelection}.png`
         computerImage.src = `assets/images/${computerSelection}.png`
         checkWinner(playerSelection, computerSelection);
-        
+
         if (parseInt(playerScore.textContent) === 5 || parseInt(computerScore.textContent) === 5) {
             endGame(previousWinner);
         }
@@ -167,8 +168,6 @@ function incrementComputerScore() {
 }
 
 function checkWinner(playerSelection, computerSelection) {
-    let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
-
     if (playerSelection !== computerSelection) {
         for (i = 0; i < rules.length; i++) {
             // check which rule contains both player hand and computer hand
@@ -208,8 +207,8 @@ function endGame(endType) {
     previousWinner = "";
     previousPlayerSelection = "";
     previousComputerSelection = "";
-    document.getElementById("player-score").textContent = 0;
-    document.getElementById("computer-score").textContent = 0;
+    playerScore.textContent = 0;
+    computerScore.textContent = 0;
     document.getElementsByClassName("main-area")[0].style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "flex";
     document.getElementById("lizard-button").style.display = "inline-block";
