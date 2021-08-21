@@ -16,7 +16,10 @@ let previousWinner = "";
 let previousPlayerSelection = "";
 let previousComputerSelection = "";
 
-// Add event listeners to all buttons after the DOM has finshed loading
+/* 
+Once the DOM has finshed loading add 'click' event listeners to all buttons and 'animationend' event
+listeners to game area images
+*/
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     let images = document.querySelectorAll(".game-animation-area img");
@@ -64,15 +67,18 @@ function runGame(playerSelection, difficulty) {
     let playerImage = document.getElementById("player-image");
     let computerImage = document.getElementById("computer-image");
     let computerSelection;
+
     if (document.getElementById("classic-rules").style.display !== "none") {
         computerSelection = selectionGenerator("classic", playerSelection, difficulty);
     } else {
         computerSelection = selectionGenerator("lizard", playerSelection, difficulty);
     }
+
     playerImage.src = "assets/images/rock.png"
     computerImage.src = "assets/images/rock.png"
     playerImage.style.animation = "player-animation 2s ease";
     computerImage.style.animation = "computer-animation 2s ease";
+
     setTimeout(function() {
         playerImage.src = `assets/images/${playerSelection}.png`
         computerImage.src = `assets/images/${computerSelection}.png`
@@ -85,9 +91,11 @@ function showRules() {
     let modal = document.getElementsByClassName("rules-modal-background")[0];
     var span = document.getElementsByClassName("rules-close")[0];
     modal.style.display = "flex";
+
     span.onclick = function() {
         modal.style.display = "none";
     }
+
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -97,38 +105,44 @@ function showRules() {
 
 function selectionGenerator(gameType, playerSelection, difficulty) {
     let numberOfChoices = (gameType === "classic") ? 3 : 5; // 3 for classic and 5 for lizard spock
+
     if (difficulty === "easy") {
         return gameChoices[Math.floor(Math.random() * numberOfChoices)];
     } else if (difficulty === "hard") {
         let newChoices = [...gameChoices]; // Create new array of choices to splice below
         let removedChoices = 0;
+
         if (previousWinner === "player" || previousWinner === "computer") {
-            let random = Math.floor(Math.random() * 3) + 1; // Random number from 1 to 3
+            let random = Math.floor(Math.random() * 3) + 1; // Random integer from 1 to 3 
+
+            if (random === 1 || random === 2) {
             // run this section 2/3rds of the time
-            if (random !== 3) {
                 for (i = 0; i < numberOfChoices; i++) {
+                    // remove previous player and computer selections from new array
                     if (newChoices[i] === previousPlayerSelection || newChoices[i] === previousComputerSelection) {
-                        newChoices.splice(i, 1); // Remove previous player or computer selection
+                        newChoices.splice(i, 1);
                         i--; // Used to account for removed value by going one iteration back
                         removedChoices++; // Counts number of removed choices
                     }
                 }
                 return newChoices[Math.floor(Math.random() * (numberOfChoices - removedChoices))];
-            } else { 
+            } else if (random === 3) { 
             // run this section 1/3rd of the time
                 for (i = 0; i < rules.length; i++) {
+                    // checks which hand(s) beat player's selection and adds to array to increase odds
                     if (rules[i].toLowerCase().indexOf(playerSelection) > 0) {
                         let beatsPlayer = rules[i].split(" ")[0].toLowerCase();
                         newChoices.unshift(beatsPlayer);
                     }
                 }
-                if (numberOfChoices === 3) {
+
+                if (gameType === "classic") {
                     return newChoices[Math.floor(Math.random() * (numberOfChoices + 1)) + 1];
-                } else {
+                } else if (gameType === "lizard") {
                     return newChoices[Math.floor(Math.random() * (numberOfChoices + 2))];
                 }
             } 
-        } else {
+        } else { // used for the first turn of match, or when the previous turn was a draw 
             return gameChoices[Math.floor(Math.random() * numberOfChoices)];
         }
     }
@@ -148,15 +162,18 @@ function incrementComputerScore() {
 
 function checkWinner(playerSelection, computerSelection) {
     let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
+    
     if (playerSelection !== computerSelection) {
         for (i = 0; i < rules.length; i++) {
+            // check which rule contains both player hand and computer hand
             if (rules[i].toLowerCase().indexOf(playerSelection) >= 0 && rules[i].toLowerCase().indexOf(computerSelection) >= 0) {
+                // when rule begins with player hand then player wins
                 if (rules[i].toLowerCase().indexOf(playerSelection) === 0) {
                     afterTurnMessage.textContent = `Player wins! ${rules[i]}`
                     incrementPlayerScore();
                     previousWinner = "player";
                     previousPlayerSelection = playerSelection;
-                } else {
+                } else { // when rule doesn't begin with player hand then computer wins
                     afterTurnMessage.textContent = `Computer wins! ${rules[i]}`;
                     incrementComputerScore();
                     previousWinner = "computer";
@@ -164,7 +181,7 @@ function checkWinner(playerSelection, computerSelection) {
                 }
             }
         }
-    } else {
+    } else { // if player and computer have the same hand
         afterTurnMessage.textContent = "It's a draw!";
         previousWinner = "draw";
     }
