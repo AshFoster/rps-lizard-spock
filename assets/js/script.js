@@ -15,6 +15,8 @@ let rules = [
 let previousWinner = "";
 let previousPlayerSelection = "";
 let previousComputerSelection = "";
+let playerScore = document.getElementById("player-score");
+let computerScore = document.getElementById("computer-score");
 
 /* 
 Once the DOM has finshed loading add 'click' event listeners to all buttons and 'animationend' event
@@ -83,6 +85,7 @@ function runGame(playerSelection, difficulty) {
         playerImage.src = `assets/images/${playerSelection}.png`
         computerImage.src = `assets/images/${computerSelection}.png`
         checkWinner(playerSelection, computerSelection);
+        
     }, 1800);
 }
 
@@ -150,19 +153,19 @@ function selectionGenerator(gameType, playerSelection, difficulty) {
 
 function incrementPlayerScore() {
     // CREDIT - increment score code is similar to code used in Code Institue's Love Maths project
-    let currentScore = parseInt(document.getElementById("player-score").textContent);
-    document.getElementById("player-score").textContent = ++currentScore;
+    let currentScore = parseInt(playerScore.textContent);
+    playerScore.textContent = ++currentScore;
 }
 
 function incrementComputerScore() {
     // CREDIT - increment score code is similar to code used in Code Institue's Love Maths project
-    let currentScore = parseInt(document.getElementById("computer-score").textContent);
-    document.getElementById("computer-score").textContent = ++currentScore;
+    let currentScore = parseInt(computerScore.textContent);
+    computerScore.textContent = ++currentScore;
 }
 
 function checkWinner(playerSelection, computerSelection) {
     let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
-    
+
     if (playerSelection !== computerSelection) {
         for (i = 0; i < rules.length; i++) {
             // check which rule contains both player hand and computer hand
@@ -170,14 +173,14 @@ function checkWinner(playerSelection, computerSelection) {
                 // when rule begins with player hand then player wins
                 if (rules[i].toLowerCase().indexOf(playerSelection) === 0) {
                     afterTurnMessage.textContent = `Player wins! ${rules[i]}`
-                    incrementPlayerScore();
                     previousWinner = "player";
                     previousPlayerSelection = playerSelection;
+                    incrementPlayerScore();
                 } else { // when rule doesn't begin with player hand then computer wins
                     afterTurnMessage.textContent = `Computer wins! ${rules[i]}`;
-                    incrementComputerScore();
                     previousWinner = "computer";
                     previousComputerSelection = computerSelection;
+                    incrementComputerScore();
                 }
             }
         }
