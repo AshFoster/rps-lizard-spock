@@ -85,7 +85,9 @@ function runGame(playerSelection, difficulty) {
         playerImage.src = `assets/images/${playerSelection}.png`
         computerImage.src = `assets/images/${computerSelection}.png`
         checkWinner(playerSelection, computerSelection);
-        
+        if (parseInt(playerScore.textContent) === 5 || parseInt(computerScore.textContent) === 5) {
+            endGame();
+        }
     }, 1800);
 }
 
