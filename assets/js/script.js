@@ -208,6 +208,8 @@ function endGame(endType) {
     previousPlayerSelection = "";
     previousComputerSelection = "";
     afterTurnMessage.textContent = "Let's go!";
+    playerImage.src = "assets/images/rock.png"
+    computerImage.src = "assets/images/rock.png"
     playerImage.style.animation = "";
     computerImage.style.animation = "";
     playerScore.textContent = 0;
