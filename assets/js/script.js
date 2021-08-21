@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "rules") {
                 showRules();
             } else if (this.getAttribute("data-type") === "quit") {
-                endGame();
+                endGame("quit");
             } else {
                 let playerSelection = this.getAttribute("data-type");
                 let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
@@ -85,8 +85,9 @@ function runGame(playerSelection, difficulty) {
         playerImage.src = `assets/images/${playerSelection}.png`
         computerImage.src = `assets/images/${computerSelection}.png`
         checkWinner(playerSelection, computerSelection);
+        
         if (parseInt(playerScore.textContent) === 5 || parseInt(computerScore.textContent) === 5) {
-            endGame();
+            endGame(previousWinner);
         }
     }, 1800);
 }
@@ -192,7 +193,23 @@ function checkWinner(playerSelection, computerSelection) {
     }
 }
 
-function endGame() {
+function endGame(endType) {
+    switch (endType) {
+        case "quit":
+            alert("YOU'VE QUIT!");
+            break;
+        case "player":
+            alert("PLAYER WINS!");
+            break;
+        case "computer":
+            alert("COMPUTER WINS!");
+            break;
+    }
+    previousWinner = "";
+    previousPlayerSelection = "";
+    previousComputerSelection = "";
+    document.getElementById("player-score").textContent = 0;
+    document.getElementById("computer-score").textContent = 0;
     document.getElementsByClassName("main-area")[0].style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "flex";
     document.getElementById("lizard-button").style.display = "inline-block";
