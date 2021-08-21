@@ -207,6 +207,9 @@ function endGame(endType) {
     previousWinner = "";
     previousPlayerSelection = "";
     previousComputerSelection = "";
+    afterTurnMessage.textContent = "Let's go!";
+    playerImage.style.animation = "";
+    computerImage.style.animation = "";
     playerScore.textContent = 0;
     computerScore.textContent = 0;
     document.getElementsByClassName("main-area")[0].style.display = "none";
