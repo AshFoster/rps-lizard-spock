@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let icons = document.querySelectorAll(".icon-selection-area i");
 
                 // reset font awesome icons
-                for (icon of icons) {
+                for (let icon of icons) {
                     icon.classList.remove("fas");
                     icon.classList.add("far");
                 }
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    for (image of images) {
+    for (let image of images) {
         image.addEventListener("animationend", function() {
             this.style.animation = "";
         });
