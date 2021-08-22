@@ -39,7 +39,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 showRules();
             } else if (this.getAttribute("data-type") === "quit") {
                 showEndModal("quit");
-                // endGame("quit");
+            } else if (this.getAttribute("data-type") === "quit-yes") {
+                document.querySelector(".end-modal-background").style.display = "none";
+                endGame();
+            } else if (this.getAttribute("data-type") === "quit-no") {
+                document.querySelector(".end-modal-background").style.display = "none";
             } else {
                 let playerSelection = this.getAttribute("data-type");
                 let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
@@ -102,7 +106,6 @@ function runGame(playerSelection, difficulty) {
 
         if (parseInt(playerScore.textContent) === 1 || parseInt(computerScore.textContent) === 1) {
             showEndModal("end");
-            endGame(previousWinner);
         }
     }, 1800);
 }
@@ -110,10 +113,10 @@ function runGame(playerSelection, difficulty) {
 function showRules() {
     // CREDIT - Code for showing modal was taken from W3 Schools and adapted to fit this project
     let modal = document.getElementsByClassName("rules-modal-background")[0];
-    var span = document.getElementsByClassName("rules-close")[0];
+    let closeSpan = document.getElementsByClassName("rules-close")[0];
     modal.style.display = "flex";
 
-    span.onclick = function() {
+    closeSpan.onclick = function() {
         modal.style.display = "none";
     }
 
@@ -127,16 +130,24 @@ function showRules() {
 function showEndModal(showType) {
     // CREDIT - Code for showing modal was taken from W3 Schools and adapted to fit this project
     let modal = document.getElementsByClassName("end-modal-background")[0];
-    var span = document.getElementsByClassName("end-close")[0];
+    let closeSpan = document.getElementsByClassName("end-close")[0];
     modal.style.display = "flex";
 
-    span.onclick = function() {
+    closeSpan.onclick = function() {
         modal.style.display = "none";
+
+        if (showType === "end") {
+            endGame();
+        }
     }
 
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+
+        if (showType === "end") {
+            endGame();
         }
     }
 
@@ -146,6 +157,18 @@ function showEndModal(showType) {
     } else if (showType === "end") {
         document.getElementsByClassName("quit-game")[0].style.display = "none";
         document.getElementsByClassName("end-game")[0].style.display = "block";
+
+        if (previousWinner === "player") {
+            document.getElementById("end-lose").style.display = "none";
+            document.getElementById("end-win").style.display = "block";
+            let endScore = document.getElementById("end-score-win");
+            endScore.innerText = `${playerScore.textContent} - ${computerScore.textContent}`;
+        } else if (previousWinner === "computer") {
+            document.getElementById("end-win").style.display = "none";
+            document.getElementById("end-lose").style.display = "block";
+            let endScore = document.getElementById("end-score-lose");
+            endScore.innerText = `${playerScore.textContent} - ${computerScore.textContent}`;
+        }
     }
 }
 
@@ -231,18 +254,7 @@ function checkWinner(playerSelection, computerSelection) {
     }
 }
 
-function endGame(endType) {
-    switch (endType) {
-        case "quit":
-            alert("YOU'VE QUIT!");
-            break;
-        case "player":
-            alert("PLAYER WINS!");
-            break;
-        case "computer":
-            alert("COMPUTER WINS!");
-            break;
-    }
+function endGame() {
     previousWinner = "";
     previousPlayerSelection = "";
     previousComputerSelection = "";
