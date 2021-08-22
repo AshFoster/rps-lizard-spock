@@ -77,6 +77,8 @@ function showClassic() {
     document.getElementById("lizard-rules").style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "none";
     document.getElementsByClassName("main-area")[0].style.display = "flex";
+    alert(document.getElementsByClassName("main-menu-area")[0].style.display);
+    alert(document.getElementsByClassName("main-area")[0].style.display);
 }
 
 function showLizardSpock() {
@@ -94,14 +96,14 @@ function runGame(playerSelection, difficulty) {
         computerSelection = selectionGenerator("lizard", playerSelection, difficulty);
     }
 
-    playerImage.src = "assets/images/rock.png"
-    computerImage.src = "assets/images/rock.png"
+    playerImage.src = "assets/images/rock.png";
+    computerImage.src = "assets/images/rock.png";
     playerImage.style.animation = "player-animation 2s ease";
     computerImage.style.animation = "computer-animation 2s ease";
 
     setTimeout(function() {
-        playerImage.src = `assets/images/${playerSelection}.png`
-        computerImage.src = `assets/images/${computerSelection}.png`
+        playerImage.src = `assets/images/${playerSelection}.png`;
+        computerImage.src = `assets/images/${computerSelection}.png`;
         checkWinner(playerSelection, computerSelection);
 
         if (parseInt(playerScore.textContent) === 1 || parseInt(computerScore.textContent) === 1) {
@@ -121,7 +123,7 @@ function showRules() {
     }
 
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
     }
@@ -142,7 +144,7 @@ function showEndModal(showType) {
     }
 
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
 
@@ -259,8 +261,8 @@ function endGame() {
     previousPlayerSelection = "";
     previousComputerSelection = "";
     afterTurnMessage.textContent = "Let's go!";
-    playerImage.src = "assets/images/rock.png"
-    computerImage.src = "assets/images/rock.png"
+    playerImage.src = "assets/images/rock.png";
+    computerImage.src = "assets/images/rock.png";
     playerImage.style.animation = "";
     computerImage.style.animation = "";
     playerScore.textContent = 0;
