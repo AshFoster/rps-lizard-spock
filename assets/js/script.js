@@ -162,12 +162,12 @@ function showEndModal(showType) {
             document.getElementById("end-lose").style.display = "none";
             document.getElementById("end-win").style.display = "block";
             let endScore = document.getElementById("end-score-win");
-            endScore.innerText = `${playerScore.textContent} - ${computerScore.textContent}`;
+            endScore.textContent = `${playerScore.textContent} - ${computerScore.textContent}`;
         } else if (previousWinner === "computer") {
             document.getElementById("end-win").style.display = "none";
             document.getElementById("end-lose").style.display = "block";
             let endScore = document.getElementById("end-score-lose");
-            endScore.innerText = `${playerScore.textContent} - ${computerScore.textContent}`;
+            endScore.textContent = `${playerScore.textContent} - ${computerScore.textContent}`;
         }
     }
 }
