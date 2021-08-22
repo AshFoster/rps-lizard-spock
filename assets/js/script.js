@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "rules") {
                 showRules();
             } else if (this.getAttribute("data-type") === "quit") {
-                endGame("quit");
+                showEndModal("quit");
+                // endGame("quit");
             } else {
                 let playerSelection = this.getAttribute("data-type");
                 let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
@@ -99,7 +100,8 @@ function runGame(playerSelection, difficulty) {
         computerImage.src = `assets/images/${computerSelection}.png`
         checkWinner(playerSelection, computerSelection);
 
-        if (parseInt(playerScore.textContent) === 5 || parseInt(computerScore.textContent) === 5) {
+        if (parseInt(playerScore.textContent) === 1 || parseInt(computerScore.textContent) === 1) {
+            showEndModal("end");
             endGame(previousWinner);
         }
     }, 1800);
@@ -119,6 +121,31 @@ function showRules() {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+}
+
+function showEndModal(showType) {
+    // CREDIT - Code for showing modal was taken from W3 Schools and adapted to fit this project
+    let modal = document.getElementsByClassName("end-modal-background")[0];
+    var span = document.getElementsByClassName("end-close")[0];
+    modal.style.display = "flex";
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    if (showType === "quit") {
+        document.getElementsByClassName("end-game")[0].style.display = "none";
+        document.getElementsByClassName("quit-game")[0].style.display = "block";
+    } else if (showType === "end") {
+        document.getElementsByClassName("quit-game")[0].style.display = "none";
+        document.getElementsByClassName("end-game")[0].style.display = "block";
     }
 }
 
