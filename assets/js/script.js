@@ -77,8 +77,6 @@ function showClassic() {
     document.getElementById("lizard-rules").style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "none";
     document.getElementsByClassName("main-area")[0].style.display = "flex";
-    alert(document.getElementsByClassName("main-menu-area")[0].style.display);
-    alert(document.getElementsByClassName("main-area")[0].style.display);
 }
 
 function showLizardSpock() {
@@ -106,7 +104,7 @@ function runGame(playerSelection, difficulty) {
         computerImage.src = `assets/images/${computerSelection}.png`;
         checkWinner(playerSelection, computerSelection);
 
-        if (parseInt(playerScore.textContent) === 1 || parseInt(computerScore.textContent) === 1) {
+        if (parseInt(playerScore.textContent) === 5 || parseInt(computerScore.textContent) === 5) {
             showEndModal("end");
         }
     }, 1800);
@@ -146,10 +144,10 @@ function showEndModal(showType) {
     window.onclick = function(event) {
         if (event.target === modal) {
             modal.style.display = "none";
-        }
 
-        if (showType === "end") {
-            endGame();
+            if (showType === "end") {
+                endGame();
+            }
         }
     }
 
