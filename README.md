@@ -24,3 +24,8 @@ The aim being to provide ideas for potential features for the website.
       - to be able to read about the rules of the game.
       - to have a choice of difficulty levels.
 
+### Scope Plane
+
+All of the user goals outlined in the strategy plane all seem to be plausible for the first release of the website. For this reason there is not too much to consider in terms of further scope, and the plan is to implement all of the above mentioned goals and outcomes.
+
+### Structure Plane
