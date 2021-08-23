@@ -31,35 +31,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "classic-version") {
-                showClassic();
-            } else if (this.getAttribute("data-type") === "lizard-spock") {
-                showLizardSpock();
-            } else if (this.getAttribute("data-type") === "rules") {
-                showRules();
-            } else if (this.getAttribute("data-type") === "quit") {
-                showEndModal("quit");
-            } else if (this.getAttribute("data-type") === "quit-yes") {
-                document.querySelector(".end-modal-background").style.display = "none";
-                endGame();
-            } else if (this.getAttribute("data-type") === "quit-no") {
-                document.querySelector(".end-modal-background").style.display = "none";
-            } else {
-                let playerSelection = this.getAttribute("data-type");
-                let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
-                let icons = document.querySelectorAll(".icon-selection-area i");
+            let dataType = this.getAttribute("data-type");
+            switch (dataType) {
+                case "classic-version":
+                    showClassic();
+                    break;
+                case "lizard-spock":
+                    showLizardSpock();
+                    break;
+                case "rules":
+                    showRules();
+                    break;
+                case "quit":
+                    showEndModal("quit");
+                    break;
+                case "quit-yes":
+                    document.querySelector(".end-modal-background").style.display = "none";
+                    endGame();
+                    break;
+                case "quit-no":
+                    document.querySelector(".end-modal-background").style.display = "none";
+                    break;
+                default:
+                    let playerSelection = this.getAttribute("data-type");
+                    let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
+                    let icons = document.querySelectorAll(".icon-selection-area i");
 
-                // reset font awesome icons
-                for (let icon of icons) {
-                    icon.classList.remove("fas");
-                    icon.classList.add("far");
-                }
+                    // reset font awesome icons
+                    for (let icon of icons) {
+                        icon.classList.remove("fas");
+                        icon.classList.add("far");
+                    }
 
-                // change selected font awesome icon 
-                this.firstElementChild.classList.remove("far");
-                this.firstElementChild.classList.add("fas");
-                
-                runGame(playerSelection, difficulty.value);
+                    // change selected font awesome icon 
+                    this.firstElementChild.classList.remove("far");
+                    this.firstElementChild.classList.add("fas");
+                    
+                    runGame(playerSelection, difficulty.value);
             }
         });
     }
