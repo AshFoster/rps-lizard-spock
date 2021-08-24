@@ -51,3 +51,23 @@ The quit button displays a modal which asks the user to confirm whether or not t
 
 These are all outlined in more detail in the [Features](#features) section below.
 
+### Skeleton Plane
+
+#### Wireframes
+
+Wireframes were created for mobiles, tablets, and desktops using [Balsamiq](https://balsamiq.com/).
+
+For each device type there are three wireframes: Main Menu, Classic Screen, and Lizard Spock Screen.
+
+Here are links to each of them:
+
+- [Mobile - Main Menu](assets/wireframes/mobile-menu.pdf)
+- [Mobile - Classic Screen](assets/wireframes/mobile-classic.pdf)
+- [Mobile - Lizard Spock Screen](assets/wireframes/mobile-lizard.pdf)
+- [Tablet - Main Menu](assets/wireframes/tablet-menu.pdf)
+- [Tablet - Classic Screen](assets/wireframes/tablet-classic.pdf)
+- [Tablet - Lizard Spock Screen](assets/wireframes/tablet-lizard.pdf)
+- [Desktop - Main Menu](assets/wireframes/desktop-menu.pdf)
+- [Desktop - Classic Screen](assets/wireframes/desktop-classic.pdf)
+- [Desktop - Lizard Spock Screen](assets/wireframes/desktop-lizard.pdf)
+
