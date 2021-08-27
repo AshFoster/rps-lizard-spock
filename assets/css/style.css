@@ -89,16 +89,17 @@ input[type="radio"] {
     position: relative;
     z-index: 3;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .selector {
     height: 90%;
     width: 50%;
-    background: blue;
+    border: 5px solid #4288E4;
+    background: #4254FF;
     border-radius: 30px;
     position: absolute;
     top: 5%;
-    left: .5%;
     z-index: 2;
     transition: all 0.25s ease-in-out;
 }
@@ -108,7 +109,7 @@ input[type="radio"]:checked + label {
 }
 
 #radio-easy:checked ~ .selector {
-    left: .5%;
+    left: 1%;
 }
 
 #radio-hard:checked ~ .selector {
