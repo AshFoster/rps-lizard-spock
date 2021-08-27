@@ -55,14 +55,16 @@ button {
     max-width: 600px;
     min-width: 270px;
     border-radius: 15px;
-    border: 2px solid black;
-    padding: 3vh 0;
 }
 
 .main-menu-area button {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
+    padding: 3vh 0;
+    border: 10px solid #4288E4;
+    background: #4254FF;
+    color: #fff;
 }
 
 /* CREDIT STARTS - The idea for the toggle switch came from Self Teach Me's YouTube video - https://www.youtube.com/watch?v=LVPmYBgBdeM - I restyled and adapted it to make it work for this project. */
@@ -337,7 +339,7 @@ input[type="radio"]:checked + label {
     color: #000;
     background-color: #ffdc5d;
     border-radius: 5px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
