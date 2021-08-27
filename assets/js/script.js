@@ -58,10 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     let icons = document.querySelectorAll(".icon-selection-area i");
 
                     // reset font awesome icons
-                    for (let icon of icons) {
-                        icon.classList.remove("fas");
-                        icon.classList.add("far");
-                    }
+                    resetIcons();
 
                     // change selected font awesome icon 
                     this.firstElementChild.classList.remove("far");
@@ -262,7 +259,17 @@ function checkWinner(playerSelection, computerSelection) {
     }
 }
 
+function resetIcons() {
+    let icons = document.querySelectorAll(".icon-selection-area i");
+
+    for (let icon of icons) {
+        icon.classList.remove("fas");
+        icon.classList.add("far");
+    }
+}
+
 function endGame() {
+    resetIcons();
     previousWinner = "";
     previousPlayerSelection = "";
     previousComputerSelection = "";
