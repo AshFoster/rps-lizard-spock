@@ -127,7 +127,8 @@ input[type="radio"]:checked + label {
 
 .after-turn-message {
     font-weight: bold;
-    font-size: .9rem;
+    font-size: 1.5rem;
+    color: #383737;
 }
 
 .game-animation-area {
@@ -137,7 +138,8 @@ input[type="radio"]:checked + label {
 }
 
 .game-animation-area p {
-    font-weight: bold;
+    font-weight: 600;
+    color: #383737;
 }
 
 .selections {
@@ -146,8 +148,8 @@ input[type="radio"]:checked + label {
     width: 42vw;
     max-width: 125px;
     border-radius: 50%;
-    border: 10px solid rgb(66, 136, 228);
-    background: rgb(34, 90, 243);
+    border: 10px solid #4288E4;
+    background: #4254FF;
     position: relative;
 }
 
@@ -228,8 +230,9 @@ input[type="radio"]:checked + label {
 }
 
 .scores-area {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 2rem;
+    color: #383737;
 }
 
 .icon-selection-area {
