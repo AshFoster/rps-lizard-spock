@@ -22,8 +22,24 @@ button {
 }
 
 .heading {
-    font-size: 1.8rem;
-    padding: 2vh 0;
+    padding: 1vh 0;
+    text-transform: uppercase;
+    color: rgb(82, 80, 80);
+    text-shadow: -1px 1px 0 rgb(116, 116, 116),
+                  1px 1px 0 rgb(116, 116, 116),
+                  1px -1px 0 rgb(116, 116, 116),
+                 -1px -1px 0 rgb(116, 116, 116);
+}
+
+#rock-paper-scissors-h1 {
+    font-family: 'Quantico', sans-serif;
+    font-size: 1.5rem;
+}
+
+#lizard-spock-h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-style: italic;
+    font-size: 1.9rem;
 }
 
 .main-menu-area {
@@ -345,7 +361,39 @@ input[type="radio"]:checked + label {
     }
 }
 
+@media screen and (min-width: 420px) {
+    #rock-paper-scissors-h1 {
+        font-size: 2rem;
+    }
+    
+    #lizard-spock-h1 {
+        font-size: 2rem;
+    }
+
+    .icon-selection-area {
+        gap: 5%;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    #rock-paper-scissors-h1 {
+        font-size: 2.5rem;
+    }
+    
+    #lizard-spock-h1 {
+        font-size: 2.5rem;
+    }
+}
+
 @media screen and (min-height: 420px) and (min-width: 750px) {
+    #rock-paper-scissors-h1 {
+        font-size: 3rem;
+    }
+    
+    #lizard-spock-h1 {
+        font-size: 3rem;
+    }
+
     .selections {
         max-height: 175px;
         max-width: 175px;
