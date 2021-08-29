@@ -243,12 +243,12 @@ function checkWinner(playerSelection, computerSelection) {
             if (rules[i].toLowerCase().indexOf(playerSelection) >= 0 && rules[i].toLowerCase().indexOf(computerSelection) >= 0) {
                 // when rule begins with player hand then player wins
                 if (rules[i].toLowerCase().indexOf(playerSelection) === 0) {
-                    afterTurnMessage.textContent = `Player wins! ${rules[i]}`
+                    afterTurnMessage.innerHTML = `Player wins! ${rules[i]}`
                     previousWinner = "player";
                     previousPlayerSelection = playerSelection;
                     incrementPlayerScore();
                 } else { // when rule doesn't begin with player hand then computer wins
-                    afterTurnMessage.textContent = `Computer wins! ${rules[i]}`;
+                    afterTurnMessage.innerHTML = `Computer wins! ${rules[i]}`;
                     previousWinner = "computer";
                     previousComputerSelection = computerSelection;
                     incrementComputerScore();
@@ -256,7 +256,7 @@ function checkWinner(playerSelection, computerSelection) {
             }
         }
     } else { // if player and computer have the same hand
-        afterTurnMessage.textContent = "It's a draw!";
+        afterTurnMessage.innerHTML= "<br>It's a draw!";
         previousWinner = "draw";
     }
 }
@@ -275,7 +275,7 @@ function endGame() {
     previousWinner = "";
     previousPlayerSelection = "";
     previousComputerSelection = "";
-    afterTurnMessage.textContent = "Let's go!";
+    afterTurnMessage.innerHTML = "<br>Let's go!";
     playerImage.src = "assets/images/rock.png";
     computerImage.src = "assets/images/rock.png";
     playerImage.style.animation = "";

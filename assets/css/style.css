@@ -381,7 +381,6 @@ input[type="radio"]:checked + label {
     #lizard-rules ul:first-of-type {
         padding-left: 15%;
     }
-    
 }
 
 @media screen and (min-height: 420px) {
