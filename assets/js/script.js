@@ -189,10 +189,10 @@ function selectionGenerator(gameType, playerSelection, difficulty) {
         let removedChoices = 0;
 
         if (previousWinner === "player" || previousWinner === "computer") {
-            let random = Math.floor(Math.random() * 2) + 1; // Random integer from 1 to 3 
+            let random = Math.floor(Math.random() * 3) + 1; // Random integer from 1 to 3 
 
             if (random === 1) {
-            // run this section half of the time
+            // run this section 1/3rd of the time
                 for (i = 0; i < numberOfChoices; i++) {
                     // remove previous player and computer selections from new array
                     if (newChoices[i] === previousPlayerSelection || newChoices[i] === previousComputerSelection) {
@@ -202,8 +202,8 @@ function selectionGenerator(gameType, playerSelection, difficulty) {
                     }
                 }
                 return newChoices[Math.floor(Math.random() * (numberOfChoices - removedChoices))];
-            } else if (random === 2) { 
-            // run this section half of the time
+            } else if (random === 2 || random === 3) { 
+            // run this section 2/3rds of the time
                 for (i = 0; i < rules.length; i++) {
                     // checks which hand(s) beat player's selection and adds to array to increase odds
                     if (rules[i].toLowerCase().indexOf(playerSelection) > 0) {
