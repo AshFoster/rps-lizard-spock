@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function showClassic() {
+    document.getElementById("lizard-spock-h1").style.display = "none"
     document.getElementById("lizard-button").style.display = "none";
     document.getElementById("spock-button").style.display = "none";
     document.getElementById("lizard-rules").style.display = "none";
@@ -85,6 +86,7 @@ function showClassic() {
 }
 
 function showLizardSpock() {
+    document.getElementById("rock-paper-scissors-h1").style.display = "none"
     document.getElementById("classic-rules").style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "none";
     document.getElementsByClassName("main-area")[0].style.display = "flex";
@@ -282,6 +284,8 @@ function endGame() {
     computerScore.textContent = 0;
     document.getElementsByClassName("main-area")[0].style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "flex";
+    document.getElementById("lizard-spock-h1").style.display = "inline"
+    document.getElementById("rock-paper-scissors-h1").style.display = "inline"
     document.getElementById("lizard-button").style.display = "inline-block";
     document.getElementById("spock-button").style.display = "inline-block";
     document.getElementById("classic-rules").style.display = "block";
