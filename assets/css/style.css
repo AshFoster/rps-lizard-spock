@@ -21,6 +21,10 @@ button {
     cursor: pointer;
 }
 
+button:disabled {
+    color: inherit;
+}
+
 .heading {
     /* padding: 2vh 0; */
     text-transform: uppercase;

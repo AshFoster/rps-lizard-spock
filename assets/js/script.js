@@ -122,11 +122,13 @@ function runGame(playerSelection, difficulty) {
     computerImage.src = "assets/images/rock.png";
     playerImage.style.animation = "player-animation 2s ease";
     computerImage.style.animation = "computer-animation 2s ease";
+    disableButtons();
 
     setTimeout(function() {
         playerImage.src = `assets/images/${playerSelection}.png`;
         computerImage.src = `assets/images/${computerSelection}.png`;
         checkWinner(playerSelection, computerSelection);
+        enableButtons();
 
         if (parseInt(playerScore.textContent) === 5 || parseInt(computerScore.textContent) === 5) {
             showEndModal("end");
@@ -284,6 +286,22 @@ function resetIcons() {
     for (let icon of icons) {
         icon.classList.remove("fas");
         icon.classList.add("far");
+    }
+}
+
+function disableButtons() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.disabled = true;
+    }
+}
+
+function enableButtons() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.disabled = false;
     }
 }
 
