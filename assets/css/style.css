@@ -10,7 +10,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 h2 {
@@ -22,7 +22,7 @@ button {
 }
 
 .heading {
-    padding: 1vh 0;
+    padding: 2vh 0;
     text-transform: uppercase;
     color: rgb(82, 80, 80);
     text-shadow: -1px 1px 0 rgb(116, 116, 116),
@@ -139,9 +139,9 @@ input[type="radio"]:checked + label {
 }
 
 .game-animation-area {
-    padding: 2vh 0 0;
+    padding: 1vh 0 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .game-animation-area p {
@@ -243,7 +243,7 @@ input[type="radio"]:checked + label {
 }
 
 .icon-selection-area {
-    margin: 4vh 0 2vh;
+    margin: 1vh 0;
     display: flex;
     justify-content: center;
     gap: 2%;
