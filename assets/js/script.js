@@ -74,6 +74,21 @@ document.addEventListener("DOMContentLoaded", function() {
             this.style.animation = "";
         });
     }
+
+    // preload images to prevent any loading delay when playing game
+    if (document.images) {
+        img1 = new Image();
+        img2 = new Image();
+        img3 = new Image();
+        img4 = new Image();
+        img5 = new Image();
+
+        img1.src = "assets/images/rock.png";
+        img2.src = "assets/images/paper.png";
+        img3.src = "assets/images/scissors.png";
+        img4.src = "assets/images/lizard.png";
+        img5.src = "assets/images/spock.png";
+    }
 });
 
 function showClassic() {
