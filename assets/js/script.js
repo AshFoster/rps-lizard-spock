@@ -15,7 +15,7 @@ let rules = [
 let previousWinner = "";
 let previousPlayerSelection = "";
 let previousComputerSelection = "";
-let afterTurnMessage = document.getElementsByClassName("after-turn-message")[0];
+let afterTurnMessage = document.querySelector(".after-turn-message p");
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
 let playerImage = document.getElementById("player-image");
@@ -258,7 +258,7 @@ function checkWinner(playerSelection, computerSelection) {
             }
         }
     } else { // if player and computer have the same hand
-        afterTurnMessage.innerHTML= "<br>It's a draw!";
+        afterTurnMessage.innerHTML= "It's a draw!";
         previousWinner = "draw";
     }
 }
@@ -277,7 +277,7 @@ function endGame() {
     previousWinner = "";
     previousPlayerSelection = "";
     previousComputerSelection = "";
-    afterTurnMessage.innerHTML = "<br>Let's go!";
+    afterTurnMessage.innerHTML = "Let's go!";
     playerImage.src = "assets/images/rock.png";
     computerImage.src = "assets/images/rock.png";
     playerImage.style.animation = "";

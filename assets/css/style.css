@@ -121,14 +121,21 @@ input[type="radio"]:checked + label {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2vh;
+    padding: 1vh 2vh;
     display: none;
 }
 
 .after-turn-message {
+    display: table;
+    min-height: 105px;
+}
+
+.after-turn-message p {
     font-weight: bold;
     font-size: 1.5rem;
     color: #383737;
+    display: table-cell;
+    vertical-align: bottom;
 }
 
 .game-animation-area {
@@ -381,6 +388,10 @@ input[type="radio"]:checked + label {
     #lizard-rules ul:first-of-type {
         padding-left: 15%;
     }
+
+    .after-turn-message {
+        min-height: 75px;
+    }
 }
 
 @media screen and (min-height: 420px) {
@@ -403,13 +414,17 @@ input[type="radio"]:checked + label {
     }
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 560px) {
     #rock-paper-scissors-h1 {
         font-size: 2.5rem;
     }
     
     #lizard-spock-h1 {
         font-size: 2.5rem;
+    }
+
+    .after-turn-message {
+        min-height: 0;
     }
 }
 
