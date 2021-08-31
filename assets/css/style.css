@@ -22,7 +22,7 @@ button {
 }
 
 button:disabled {
-    color: inherit;
+    color: #000;
 }
 
 .heading {
@@ -208,6 +208,10 @@ input[type="radio"]:checked + label {
     display: flex;
     justify-content: center;
     gap: 2%;
+}
+
+.icon-selection-area button {
+    background: transparent;
 }
 
 .icon-selection-area i {
