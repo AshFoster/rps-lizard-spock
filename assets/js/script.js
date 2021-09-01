@@ -114,6 +114,7 @@ function showLizardSpock() {
 function runGame(playerSelection, difficulty) {
     let computerSelection;
 
+    // other elements could've been used to check whether playing classic or lizard mode
     if (document.getElementById("classic-rules").style.display !== "none") {
         computerSelection = selectionGenerator("classic", playerSelection, difficulty);
     } else {
@@ -126,6 +127,7 @@ function runGame(playerSelection, difficulty) {
     computerImage.style.animation = "computer-animation 2s ease";
     disableButtons();
 
+    /* CREDIT - the idea to use set timeout function to delay code from running during animation came from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to to fit this project */
     setTimeout(function() {
         playerImage.src = `assets/images/${playerSelection}.png`;
         computerImage.src = `assets/images/${computerSelection}.png`;
