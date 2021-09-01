@@ -25,6 +25,7 @@ let computerImage = document.getElementById("computer-image");
 Once the DOM has finshed loading add 'click' event listeners to all buttons and 'animationend' event
 listeners to game area images
 */
+// CREDIT - the idea to add content loading event listener came from Code Institue's Love Maths project
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     let images = document.querySelectorAll(".game-animation-area img");
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    /* CREDIT - the idea to reset animation came from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to suit my preference */
     for (let image of images) {
         image.addEventListener("animationend", function() {
             this.style.animation = "";
