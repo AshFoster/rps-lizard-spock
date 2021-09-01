@@ -13,6 +13,15 @@ body {
     justify-content: center;
 }
 
+h1 {
+    text-transform: uppercase;
+    color: #525250;
+    text-shadow: -1px 1px 0 #747474,
+                  1px 1px 0 #747474,
+                  1px -1px 0 #747474,
+                 -1px -1px 0 #747474;
+}
+
 h2 {
     font-size: 1.2rem;
 }
@@ -23,15 +32,6 @@ button {
 
 button:disabled {
     color: #000;
-}
-
-.heading {
-    text-transform: uppercase;
-    color: rgb(82, 80, 80);
-    text-shadow: -1px 1px 0 rgb(116, 116, 116),
-                  1px 1px 0 rgb(116, 116, 116),
-                  1px -1px 0 rgb(116, 116, 116),
-                 -1px -1px 0 rgb(116, 116, 116);
 }
 
 #rock-paper-scissors-h1 {
