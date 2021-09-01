@@ -1,3 +1,7 @@
+/* All section names within this style sheet are preceeded with /// for ease of finding */
+
+/* /// Global styles and typography */
+
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +38,9 @@ button:disabled {
     color: #000;
 }
 
+
+/* \\\ Heading Styles */
+
 #rock-paper-scissors-h1 {
     font-family: 'Quantico', sans-serif;
     font-size: 1.5rem;
@@ -44,6 +51,8 @@ button:disabled {
     font-style: italic;
     font-size: 1.9rem;
 }
+
+/* \\\ Main Menu Area Styles */
 
 .main-menu-area {
     display: flex;
@@ -108,7 +117,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-    color: white;
+    color: #fff;
 }
 
 #radio-easy:checked ~ .selector {
@@ -119,6 +128,9 @@ input[type="radio"]:checked + label {
     left: 49.5%;
 }
 /* END OF CREDIT */
+
+
+/* \\\ Main Area Styles */
 
 .main-area {
     display: flex;
@@ -140,6 +152,8 @@ input[type="radio"]:checked + label {
     display: table-cell;
     vertical-align: bottom;
 }
+
+/* \\\ Game Animation Area Styles */
 
 .game-animation-area {
     padding: 1vh 0 0;
@@ -179,6 +193,9 @@ input[type="radio"]:checked + label {
     right: 12%;
 }
 
+
+/* \\\ Game Animation Keyframes */
+
 @keyframes player-animation {
     0%, 25%, 50%, 75%, 100% {
         transform: rotateY(180deg) translateY(0);
@@ -197,11 +214,15 @@ input[type="radio"]:checked + label {
     }
 }
 
+/* \\\ Scores Area Styles */
+
 .scores-area {
     font-weight: 600;
     font-size: 2rem;
     color: #383737;
 }
+
+/* \\\ Icon Selection Area Styles */
 
 .icon-selection-area {
     margin: 1vh 0;
@@ -224,6 +245,8 @@ input[type="radio"]:checked + label {
     line-height: 40px;
 }
 
+/* \\\ Button Area Styles */
+
 .button-area {
     display: flex;
     justify-content: center;
@@ -241,6 +264,8 @@ input[type="radio"]:checked + label {
     font-weight: 600;
     font-size: 1rem;
 }
+
+/* \\\ Modal Styles */
 
 .rules-modal-background,
 .end-modal-background {
@@ -316,7 +341,6 @@ input[type="radio"]:checked + label {
     font-size: 1.6rem;
 }
 
-
 .quit-game button {
     width: 35%;
     min-width: 60px;
@@ -332,6 +356,9 @@ input[type="radio"]:checked + label {
     font-size: 1rem;
 }
 
+/* /// Media queries */
+
+/* For very small screen sizes with maximum height of 350px */
 
 @media screen and (min-height: 350px) {  
     .selections {
@@ -347,6 +374,8 @@ input[type="radio"]:checked + label {
     }
 }
 
+/* For very small screen sizes with maximum width of 350px */
+
 @media screen and (min-width: 350px) {
     #classic-rules ul:first-of-type,
     #lizard-rules ul:first-of-type {
@@ -358,11 +387,15 @@ input[type="radio"]:checked + label {
     }
 }
 
+/* For small screen sizes with maximum height of 420px */
+
 @media screen and (min-height: 420px) {
     body {
         height: 100vh;
     }
 }
+
+/* For small screen sizes with maximum width of 420px */
 
 @media screen and (min-width: 420px) {
     #rock-paper-scissors-h1 {
@@ -378,6 +411,8 @@ input[type="radio"]:checked + label {
     }
 }
 
+/* For medium screen sizes with maximum width of 560px */
+
 @media screen and (min-width: 560px) {
     #rock-paper-scissors-h1 {
         font-size: 2.5rem;
@@ -391,6 +426,8 @@ input[type="radio"]:checked + label {
         min-height: 0;
     }
 }
+
+/* For medium screen sizes with maximum height of 420px and maximum width of 750px */
 
 @media screen and (min-height: 420px) and (min-width: 750px) {
     #rock-paper-scissors-h1 {
@@ -407,10 +444,12 @@ input[type="radio"]:checked + label {
     }
 }
 
+/* For medium screen sizes with maximum height of 680px and maximum width of 850px */
+
 @media screen and (min-height: 680px) and (min-width: 850px) {
     .main-area {
         width: 80%;
-        margin: auto;
+        margin: 0 auto;
     }
 
     .selections {
@@ -418,6 +457,8 @@ input[type="radio"]:checked + label {
         max-width: 250px;
     }
 }
+
+/* For large screen sizes with maximum width of 1400px */
 
 @media screen and (min-width: 1400px) {
     .main-area {
