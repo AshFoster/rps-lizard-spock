@@ -78,7 +78,9 @@ button:disabled {
     color: #fff;
 }
 
-/* CREDIT STARTS - The idea for the toggle switch came from Self Teach Me's YouTube video - https://www.youtube.com/watch?v=LVPmYBgBdeM - I restyled and adapted it to make it work for this project. */
+/* CREDIT STARTS - The idea for the toggle switch came from Self Teach Me's YouTube 
+video - https://www.youtube.com/watch?v=LVPmYBgBdeM - I restyled and adapted it to 
+make it work for this project. */
 .difficulty-toggle {
     display: flex;
     position: relative;
@@ -192,7 +194,9 @@ input[type="radio"]:checked + label {
 
 /* \\\ Game Animation Keyframes */
 
-/* CREDIT - the idea for this animation came from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to suit my preference */
+/* CREDIT - the idea for this animation came from Dev Ed's YouTube 
+video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to 
+suit my preference */
 @keyframes player-animation {
     0%, 25%, 50%, 75%, 100% {
         transform: rotateY(180deg) translateY(0);

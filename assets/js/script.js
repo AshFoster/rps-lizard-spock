@@ -25,7 +25,7 @@ let computerImage = document.getElementById("computer-image");
 Once the DOM has finshed loading add 'click' event listeners to all buttons and 'animationend' event
 listeners to game area images
 */
-// CREDIT - the idea to add content loading event listener came from Code Institue's Love Maths project
+// CREDIT - the idea to add content loaded event listener came from Code Institue's Love Maths project
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     let images = document.querySelectorAll(".game-animation-area img");
@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 default:
                     let playerSelection = this.getAttribute("data-type");
                     let difficulty = document.querySelector('input[name="difficulty-radio"]:checked');
-                    let icons = document.querySelectorAll(".icon-selection-area i");
 
                     // reset font awesome icons
                     resetIcons();
@@ -70,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    /* CREDIT - the idea to reset animation came from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to suit my preference */
+    /* CREDIT - the idea to reset animation came from Dev Ed's YouTube video
+     - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to suit my preference */
     for (let image of images) {
         image.addEventListener("animationend", function() {
             this.style.animation = "";
@@ -93,6 +93,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+/**
+ * Show Classic is called when the user clicks on the play Classic Version
+ * button. It makes the main area appear and hides the main menu area and any 
+ * lizard game related elements.
+ */
 function showClassic() {
     document.getElementById("heading-break").style.display = "none"
     document.getElementById("lizard-spock-h1").style.display = "none"
@@ -103,6 +108,11 @@ function showClassic() {
     document.getElementsByClassName("main-area")[0].style.display = "flex";
 }
 
+/**
+ * Show Lizard Spock is called when the user clicks on the play Lizard Spock
+ * button. It makes the main area appear and hides the main menu area and any 
+ * classic game related elements.
+ */
 function showLizardSpock() {
     document.getElementById("rock-paper-scissors-h1").style.display = "none"
     document.getElementById("heading-break").style.display = "none"
@@ -111,10 +121,15 @@ function showLizardSpock() {
     document.getElementsByClassName("main-area")[0].style.display = "flex";
 }
 
+/**
+ * Run Game is called when the user clicks on one of the rock, paper, scissors,
+ * lizard, or spock icon buttons. It then runs the main game process based on
+ * this selection and the current difficulty selection.
+ */
 function runGame(playerSelection, difficulty) {
     let computerSelection;
 
-    // other elements could've been used to check whether playing classic or lizard mode
+    // this is one of several methods that could be used to determine if classic or lizard is being played
     if (document.getElementById("classic-rules").style.display !== "none") {
         computerSelection = selectionGenerator("classic", playerSelection, difficulty);
     } else {
@@ -127,7 +142,9 @@ function runGame(playerSelection, difficulty) {
     computerImage.style.animation = "computer-animation 2s ease";
     disableButtons();
 
-    /* CREDIT - the idea to use set timeout function to delay code from running during animation came from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to to fit this project */
+    /* CREDIT - the idea to use set timeout function to delay code from running during animation came
+    from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to to fit this
+    project */
     setTimeout(function() {
         playerImage.src = `assets/images/${playerSelection}.png`;
         computerImage.src = `assets/images/${computerSelection}.png`;
@@ -140,6 +157,9 @@ function runGame(playerSelection, difficulty) {
     }, 1800);
 }
 
+/**
+ * Show Rules is called when the rules button is clicked. It simply makes the rules modal appear.
+ */
 function showRules() {
     // CREDIT - Code for showing modal was taken from W3 Schools and adapted to fit this project
     let modal = document.getElementsByClassName("rules-modal-background")[0];
@@ -157,6 +177,10 @@ function showRules() {
     }
 }
 
+/**
+ * Show End Modal is called either when a game has been finished or when the quit
+ * button is clicked. Its action varies depending on why it's been called.
+ */
 function showEndModal(showType) {
     // CREDIT - Code for showing modal was taken from W3 Schools and adapted to fit this project
     let modal = document.getElementsByClassName("end-modal-background")[0];
@@ -202,6 +226,10 @@ function showEndModal(showType) {
     }
 }
 
+/**
+ * Selection Generator is called to generate the computers hand for each turn. Its calculation
+ * method is different depending on which difficulty level has been selected.
+ */
 function selectionGenerator(gameType, playerSelection, difficulty) {
     let numberOfChoices = (gameType === "classic") ? 3 : 5; // 3 for classic and 5 for lizard spock
 
@@ -212,7 +240,7 @@ function selectionGenerator(gameType, playerSelection, difficulty) {
         let removedChoices = 0;
 
         if (previousWinner === "player" || previousWinner === "computer") {
-            let random = Math.floor(Math.random() * 3) + 1; // Random integer from 1 to 3 
+            let random = Math.floor(Math.random() * 3) + 1;
 
             if (random === 1) {
             // run this section 1/3rd of the time
@@ -259,6 +287,10 @@ function incrementComputerScore() {
     computerScore.textContent = ++currentScore;
 }
 
+/**
+ * Check Winner compares the player's and computer's hands to see who wins or if it's a draw.
+ * It then updates the after turn message and the relevant score on the screen.
+ */
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection !== computerSelection) {
         for (i = 0; i < rules.length; i++) {
@@ -284,6 +316,9 @@ function checkWinner(playerSelection, computerSelection) {
     }
 }
 
+/**
+ * Reset Icons resets the rock, paper, scissors, lizard, and spock icons to their original state.
+ */
 function resetIcons() {
     let icons = document.querySelectorAll(".icon-selection-area i");
 
@@ -309,6 +344,11 @@ function enableButtons() {
     }
 }
 
+/**
+ * End Game is called either when the game has ended or when the player has quit. It 
+ * resets all relevant variables and elements to their original state ready for the 
+ * game to be played again.  
+ */
 function endGame() {
     resetIcons();
     previousWinner = "";
@@ -317,8 +357,6 @@ function endGame() {
     afterTurnMessage.innerHTML = "Let's go!";
     playerImage.src = "assets/images/rock.png";
     computerImage.src = "assets/images/rock.png";
-    playerImage.style.animation = "";
-    computerImage.style.animation = "";
     playerScore.textContent = 0;
     computerScore.textContent = 0;
     document.getElementsByClassName("main-area")[0].style.display = "none";
