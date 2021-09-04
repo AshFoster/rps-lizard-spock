@@ -128,5 +128,5 @@ Each of them are of the font category Sans Serif which is the font used as a fal
   - The main menu area contains two buttons: one to play the classic version and the other to play the lizard spock version of the game. It also contains a toggle selector switch which is used to select the difficulty of the game.
   - Its purpose is to allow the user to select which version of the game they'd like to play, and what difficulty level they'd like to play it on.
 
-  ![Home/Landing Page](assets/images/main-menu-area.jpg)
+  ![Main Menu Area](assets/images/main-menu-area.jpg)
 
