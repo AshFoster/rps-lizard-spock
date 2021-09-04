@@ -69,8 +69,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    /* CREDIT - the idea to reset animation came from Dev Ed's YouTube video
-     - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to suit my preference */
+    /* 
+    CREDIT - the idea to reset animation came from Dev Ed's YouTube video
+    - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to suit my preference 
+    */
     for (let image of images) {
         image.addEventListener("animationend", function() {
             this.style.animation = "";
@@ -142,9 +144,11 @@ function runGame(playerSelection, difficulty) {
     computerImage.style.animation = "computer-animation 2s ease";
     disableButtons();
 
-    /* CREDIT - the idea to use set timeout function to delay code from running during animation came
-    from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to to fit this
-    project */
+    /* 
+    CREDIT - the idea to use set timeout function to delay code from running during animation came
+    from Dev Ed's YouTube video - https://www.youtube.com/watch?v=qWPtKtYEsN4 - I amended to fit this
+    project.
+    */
     setTimeout(function() {
         playerImage.src = `assets/images/${playerSelection}.png`;
         computerImage.src = `assets/images/${computerSelection}.png`;
@@ -256,7 +260,10 @@ function selectionGenerator(gameType, playerSelection, difficulty) {
             } else if (random === 2 || random === 3) { 
             // run this section 2/3rds of the time
                 for (i = 0; i < rules.length; i++) {
-                    // checks which hand(s) beat player's selection and adds to array to increase odds
+                    /* 
+                    Checks which hand(s) beat player's selection and adds to array to increase 
+                    computers odds
+                     */
                     if (rules[i].toLowerCase().indexOf(playerSelection) > 0) {
                         let beatsPlayer = rules[i].split(" ")[0].toLowerCase();
                         newChoices.unshift(beatsPlayer);
@@ -345,7 +352,7 @@ function enableButtons() {
 }
 
 /**
- * End Game is called either when the game has ended or when the player has quit. It 
+ * End Game is called either when a game has finished or when the player has quit. It 
  * resets all relevant variables and elements to their original state ready for the 
  * game to be played again.  
  */
