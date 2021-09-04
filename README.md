@@ -112,4 +112,14 @@ Each of them are of the font category Sans Serif which is the font used as a fal
 
 [Font Awesome](https://fontawesome.com/) was used for the Rock, Paper, Scissors, Lizard and Spock icons that the user clicks on to make their selection each turn. The same icons are also shown on the rules modal to tell the user what each of them represents. These icons were chosen because they are simple, recognisable, and easy to work with.
 
+## Features
+
+### Existing Features
+
+- __Heading__
+
+  - The heading is at the top of the page and its state is dependent on which section is showing at the time. When the main menu section is showing it contains both "Rock Paper Scissors..." and "...Lizard Spock", but only shows the relevant heading when playing the classic version or the lizard spock version of the game.
+  - Its purpose is to immediately let the user know that they're on a rock paper scissors lizard spock game website, and also to show them which version of the game they're currenlty playing when doing so.
+  
+  ![Heading](assets/images/heading.jpg)
 
