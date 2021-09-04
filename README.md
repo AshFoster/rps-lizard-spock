@@ -1,5 +1,7 @@
 # Rock Paper Scissors Lizard Spock Game
 
+[Click here to view the live site.](https://ashfoster.github.io/rps-lizard-spock/)
+
 ## Contents
 
 ## Overview
@@ -70,4 +72,10 @@ Here are links to each of them:
 - [Desktop - Main Menu](assets/wireframes/desktop-menu.pdf)
 - [Desktop - Classic Screen](assets/wireframes/desktop-classic.pdf)
 - [Desktop - Lizard Spock Screen](assets/wireframes/desktop-lizard.pdf)
+
+### Surface Plane
+
+#### Imagery
+
+Images were only used to represent the player's and computer's hands, those being: rock, paper, scissors, lizard or, spock. The chosen images used within the game came from [Tony Florida's](https://tonyflorida.com/rock-paper-scissors-lizard-spock-rules/) website, found with a google search. The images looked different from others I had seen; I liked this so decided to use them. I cropped them all, changed the angles, and made their background's transparent.
 
