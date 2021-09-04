@@ -129,6 +129,7 @@ function showLizardSpock() {
  * this selection and the current difficulty selection.
  */
 function runGame(playerSelection, difficulty) {
+    disableButtons();
     let computerSelection;
 
     // this is one of several methods that could be used to determine if classic or lizard is being played
@@ -142,7 +143,6 @@ function runGame(playerSelection, difficulty) {
     computerImage.src = "assets/images/rock.png";
     playerImage.style.animation = "player-animation 2s ease";
     computerImage.style.animation = "computer-animation 2s ease";
-    disableButtons();
 
     /* 
     CREDIT - the idea to use set timeout function to delay code from running during animation came
@@ -357,7 +357,6 @@ function enableButtons() {
  * game to be played again.  
  */
 function endGame() {
-    resetIcons();
     previousWinner = "";
     previousPlayerSelection = "";
     previousComputerSelection = "";
@@ -375,4 +374,5 @@ function endGame() {
     document.getElementById("spock-button").style.display = "inline-block";
     document.getElementById("classic-rules").style.display = "block";
     document.getElementById("lizard-rules").style.display = "block";
+    resetIcons();
 }
