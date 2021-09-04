@@ -61,7 +61,6 @@ button:disabled {
 
 .main-menu-area button,
 .difficulty-area {
-    margin: 4vh auto;
     width: 70%;
     max-width: 600px;
     min-width: 270px;
@@ -69,6 +68,7 @@ button:disabled {
 }
 
 .main-menu-area button {
+    margin: 4vh auto;
     padding: 3vh 0;
     border: 10px solid #4288E4;
     background: #4254FF;
@@ -76,6 +76,10 @@ button:disabled {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #fff;
+}
+
+.difficulty-area {
+    margin: 2vh auto 0; 
 }
 
 /* CREDIT STARTS - The idea for the toggle switch came from Self Teach Me's YouTube 
