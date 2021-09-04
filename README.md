@@ -108,4 +108,8 @@ Poppins - This is used for all other text.
 
 Each of them are of the font category Sans Serif which is the font used as a fallback if for any reason the specified font isn't available.
 
+#### Iconography
+
+[Font Awesome](https://fontawesome.com/) was used for the Rock, Paper, Scissors, Lizard and Spock icons that the user clicks on to make their selection each turn. The same icons are also shown on the rules modal to tell the user what each of them represents. These icons were chosen because they are simple, recognisable, and easy to work with.
+
 
