@@ -70,8 +70,8 @@ button:disabled {
 .main-menu-area button {
     margin: 4vh auto;
     padding: 3vh 0;
-    border: 10px solid #4288E4;
-    background: #4254FF;
+    border: 10px solid #4288e4;
+    background: #4254ff;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -115,8 +115,8 @@ input[type="radio"] {
     z-index: 2;
     height: 90%;
     width: 50%;
-    border: 5px solid #4288E4;
-    background: #4254FF;
+    border: 5px solid #4288e4;
+    background: #4254ff;
     border-radius: 30px;
     transition: all 0.25s ease-in-out;
 }
@@ -153,7 +153,6 @@ input[type="radio"]:checked + label {
     vertical-align: bottom;
     font-weight: 600;
     font-size: 1.5rem;
-    color: #383737;
 }
 
 /* \\\ Game Animation Area Styles */
@@ -166,7 +165,6 @@ input[type="radio"]:checked + label {
 
 .game-animation-area p {
     font-weight: 600;
-    color: #383737;
 }
 
 .selections {
@@ -175,8 +173,8 @@ input[type="radio"]:checked + label {
     max-height: 125px;
     width: 42vw;
     max-width: 125px;
-    border: 10px solid #4288E4;
-    background: #4254FF;
+    border: 10px solid #4288e4;
+    background: #4254ff;
     border-radius: 50%;
 }
 
@@ -225,7 +223,6 @@ suit my preference */
 .scores-area {
     font-weight: 600;
     font-size: 2rem;
-    color: #383737;
 }
 
 /* \\\ Icon Selection Area Styles */
@@ -244,7 +241,7 @@ suit my preference */
 .icon-selection-area i {
     width: 40px;
     height: 40px;
-    border: 2px solid black;
+    border: 2px solid #000;
     font-size: 20px;
     text-align: center;
     line-height: 40px;
@@ -263,8 +260,8 @@ suit my preference */
     min-width: 80px;
     margin: 2vh 6%;
     padding: .5rem;
-    border: 5px solid #4288E4;
-    background: #4254FF;
+    border: 5px solid #4288e4;
+    background: #4254ff;
     color: #fff;
     font-weight: 600;
     font-size: 1rem;
@@ -302,9 +299,9 @@ suit my preference */
     width: 80%;
     margin: auto;
     padding: 20px;
-    border: 10px solid #4288E4;
-    background: #4254FF;
-    color: #F1EDFF;
+    border: 10px solid #4288e4;
+    background: #4254ff;
+    color: #fff;
     border-radius: 5%;
 }
 
