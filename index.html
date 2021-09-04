@@ -68,19 +68,19 @@
 
         <!-- \\\ Icon Selection Area -->
         <div class="icon-selection-area">
-            <button data-type="rock">
+            <button data-type="rock" aria-label="choose rock">
                 <i class="far fa-hand-rock"></i>
             </button>
-            <button data-type="paper">
+            <button data-type="paper" aria-label="choose paper">
                 <i class="far fa-hand-paper"></i>
             </button>
-            <button data-type="scissors">
+            <button data-type="scissors" aria-label="choose scissors">
                 <i class="far fa-hand-scissors"></i>
             </button>
-            <button data-type="lizard" id="lizard-button">
+            <button data-type="lizard" id="lizard-button" aria-label="choose lizard">
                 <i class="far fa-hand-lizard"></i>
             </button>
-            <button data-type="spock" id="spock-button">
+            <button data-type="spock" id="spock-button" aria-label="choose spock">
                 <i class="far fa-hand-spock"></i>
             </button>
         </div>
@@ -95,7 +95,7 @@
     <!-- \\\ Rules Modal -->
     <div class="rules-modal-background">
         <div class="rules-modal-content">
-            <span class="rules-close">&times;</span>
+            <span class="rules-close" aria-label="close rules modal">&times;</span>
             <h2>Rules</h2>
             <div id="classic-rules">
                 <ul>
@@ -143,7 +143,7 @@
                 <button data-type="quit-no">No</button>
             </div>
             <div class="end-game">
-                <span class="end-close">&times;</span>
+                <span class="end-close" aria-label="close end game modal">&times;</span>
                 <p id="end-win">
                     You won <span id="end-score-win"></span>!
                     <br>
