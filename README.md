@@ -94,3 +94,18 @@ All of the colours mentioned above can be seen in the following images:
 ![Website's Colours 1](assets/images/colour-scheme1.jpg)
 ![Website's Colours 2](assets/images/colour-scheme2.jpg)
 
+#### Typography
+
+For my typography choices I used [Google Fonts](https://fonts.google.com/?sort=popularity) which I sorted by popularity to give me an idea of some fonts that are likely to work well across a number of websites.
+
+I then selected the ones that stood out the most to me. The fonts I chose are as follows:
+
+Quantico - This is used for the H1 element that says Rock Paper Scissors.
+
+Orbitron - This is used for the H1 element that says Lizard Spock. 
+
+Poppins - This is used for all other text.
+
+Each of them are of the font category Sans Serif which is the font used as a fallback if for any reason the specified font isn't available.
+
+
