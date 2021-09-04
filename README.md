@@ -77,5 +77,20 @@ Here are links to each of them:
 
 #### Imagery
 
-Images were only used to represent the player's and computer's hands, those being: rock, paper, scissors, lizard or, spock. The chosen images used within the game came from [Tony Florida's](https://tonyflorida.com/rock-paper-scissors-lizard-spock-rules/) website, found with a google search. The images looked different from others I had seen; I liked this so decided to use them. I cropped them all, changed the angles, and made their background's transparent.
+Images were only used to represent the player's and computer's hands, those being: rock, paper, scissors, lizard or, spock. The chosen images used within the game came from [Tony Florida's](https://tonyflorida.com/rock-paper-scissors-lizard-spock-rules/) website, found with a google search. The images looked different from others I had seen; I liked this so decided to use them. I cropped them all, changed the angles, and made their backgrounds transparent.
+
+#### Colour Scheme
+
+The colour scheme used was partly influenced by the colour of the [images](#imagery) chosen which are yellow (#ffdc5d). I put this colour into [Adobe's Colour Wheel](https://color.adobe.com/create/color-wheel) and found a nice contrasting blue (#4254ff). This colour was used throughout the site including for the main menu buttons and difficulty toggle, the rules and quit buttons, the rules and quit modals, and the player and computer selections backgrounds. A lighter blue (#4288e4) was used as a border around all of these elements, too.
+
+The heading text is coloured with a dark shade of grey (#525250) and has a border that is a slightly ligher shade of grey (#747474). This combo works well as it seems to make the text stand out without being overpowering.
+
+The difficulty toggle background colour is a very light grey (#efefef) with a darker but still light grey border (#ccc). Although light, the grey still stands out against the white background, but doesn't take away the effect of the blue toggle selector in front of it. The text is white when covered by the toggle and black when not covered. The text colour changes when the toggle switches from one to the other.
+
+The main background colour is white, and all other text - not yet refered to above - that sits on top of this is black. Where the background is blue, the text is white.
+
+All of the colours mentioned above can be seen in the following images:
+
+![Website's Colours 1](assets/images/colour-scheme1.jpg)
+![Website's Colours 2](assets/images/colour-scheme2.jpg)
 
