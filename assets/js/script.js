@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
  * lizard game related elements.
  */
 function showClassic() {
-    document.getElementById("heading-break").style.display = "none"
     document.getElementById("lizard-spock-h1").style.display = "none"
     document.getElementById("lizard-button").style.display = "none";
     document.getElementById("spock-button").style.display = "none";
@@ -117,7 +116,6 @@ function showClassic() {
  */
 function showLizardSpock() {
     document.getElementById("rock-paper-scissors-h1").style.display = "none"
-    document.getElementById("heading-break").style.display = "none"
     document.getElementById("classic-rules").style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "none";
     document.getElementsByClassName("main-area")[0].style.display = "flex";
@@ -368,7 +366,6 @@ function endGame() {
     document.getElementsByClassName("main-area")[0].style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "flex";
     document.getElementById("lizard-spock-h1").style.display = "inline"
-    document.getElementById("heading-break").style.display = "block"
     document.getElementById("rock-paper-scissors-h1").style.display = "inline"
     document.getElementById("lizard-button").style.display = "inline-block";
     document.getElementById("spock-button").style.display = "inline-block";
