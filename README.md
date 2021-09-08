@@ -143,6 +143,13 @@ Each of them are of the font category Sans Serif which is the font used as a fal
 
     ![Main Area](assets/images/main-area.jpg)
 
+- __Rules Modal__
+
+  - The rules modal is displayed when the rules button is clicked on. It firstly shows what each symbol represents, and then shows which symbols beat which symbols.
+  - The aim of the rules modal is to allow the player to see what the rules of the game are whether they're completely new to it or just need a refresh.
+
+  ![Rules Modal](assets/images/rules-modal.jpg)
+
 
 
 
