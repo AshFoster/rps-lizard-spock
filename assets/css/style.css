@@ -288,6 +288,7 @@ suit my preference */
 .rules-close,
 .end-close {
     float: right;
+    background: transparent;
     color: #fff;
     font-size: 30px;
     font-weight: 600;
