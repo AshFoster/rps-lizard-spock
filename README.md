@@ -130,4 +130,19 @@ Each of them are of the font category Sans Serif which is the font used as a fal
 
   ![Main Menu Area](assets/images/main-menu-area.jpg)
 
+- __Main Area__
+
+  - The main area contains all of the in game elements. Those being:
+    1. After turn message - Initially says "Let's Go!", and then updates after each turn to say who won or if it is a draw. Its purpose is to let the player know the outcome of each turn.
+    2. Game animation area - Contains images of the player's and computer's hands. Before the first turn of the game they're both an image of the rock symbol, and then once the player has selected their hand an animation is displayed before showing what hands were chosen. Its purpose it to provide the player with a visual representation similar to that of playing the game in real life.
+    3. Scores area - This simply displays the score of the game, intially being 0-0. The aim here to is to allow the player to keep track of the score.
+    4. Icon selection area - This area contains icons of the available hands that the player can choose for their turn. If playing classic only rock, paper, and scissors are shown, and when playing lizard then lizard and spock are also shown. The aim here is to make it easy for the player to play their selected hand.
+    5. Button area - Two buttons are contained within this area. One that displays the rules of the game, and the other that allows the player to quit the game. Its aim is to allow the player to see the rules or to quit the game. 
+
+  - The image below shows all of these areas from top to bottom.
+
+    ![Main Area](assets/images/main-area.jpg)
+
+
+
 
