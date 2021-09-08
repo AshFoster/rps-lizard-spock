@@ -157,6 +157,24 @@ Each of them are of the font category Sans Serif which is the font used as a fal
 
   ![End Game Modal](assets/images/end-game-modal.jpg)
 
+## Testing
+
+### Validator Testing
+
+- __HTML__
+
+  - No errors or warnings were shown when put through the [W3C Markup Validation Service.](https://validator.w3.org/)
+
+- __CSS__
+
+  - No errors found when put through the [W3C CSS Validation Service - Jigsaw.](https://jigsaw.w3.org/css-validator/)
+
+- __JavaScript__
+
+  - No errors found when put through the [JSHint.](https://jshint.com/) Though there were many warnings about some things being available in ES6 (let, for of, template literal syntax, spread operator). With these being taught in the course I presume them to be ok. 
+  - Another warning:
+       "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (showClassic, showLizardSpock, showRules, showEndModal, endGame, resetIcons, runGame)"
+    This is referring to the for loop that adds event listeners to buttons. I don't see this as an issue because it is only run once - when the DOM has finished loading - and it simply adds functions to the buttons' click events.
 
 
 
