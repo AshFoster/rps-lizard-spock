@@ -150,6 +150,13 @@ Each of them are of the font category Sans Serif which is the font used as a fal
 
   ![Rules Modal](assets/images/rules-modal.jpg)
 
+- __End Game Modal__
+
+  - The end game modal is displayed when the player clicks on the quit button. It asks the player whether or not they actually want to quit. It has two buttons, yes and no.
+  - The aim of the end game modal is to allow the player the chance not to quit in case they clicked on the quit button by accident or if they have changed their mind suddenly.
+
+  ![End Game Modal](assets/images/end-game-modal.jpg)
+
 
 
 
