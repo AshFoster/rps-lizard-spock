@@ -176,5 +176,19 @@ Each of them are of the font category Sans Serif which is the font used as a fal
        "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (showClassic, showLizardSpock, showRules, showEndModal, endGame, resetIcons, runGame)"
     This is referring to the for loop that adds event listeners to buttons. I don't see this as an issue because it is only run once - when the DOM has finished loading - and it simply adds functions to the buttons' click events.
 
+### Performance Testing
 
+I audited the website for mobile and desktop using Google Chrome's lighthouse feature. All scores were high. It might only be examing the landing page and not the in game page.
+
+The final lighthouse scores are as follows:
+
+  - Mobile
+
+  ![Mobile Lighthouse](assets/images/lighthouse-mobile.jpg)
+
+  - Desktop
+
+  ![Desktop Lighthouse](assets/images/lighthouse-desktop.jpg)
+
+I also used [WAVE Evaluation Tool](https://wave.webaim.org/) on the site and everything looks fine other than one contrast error issue. This relates to the difficulty toggle button. The labels which say easy and hard both have white text and a background colour of a light grey. Normally this would obviously cause a contrast issue, but in this case there is another div on top named "selector" which acts as the slider. This slider is blue and prevents the contrast issue from being present. When the slider moves the text changes to black which also prevents any contrast issues. I believe the evaluation tool hasn't picked this up.
 
