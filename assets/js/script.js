@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * lizard game related elements.
  */
 function showClassic() {
-    document.getElementById("lizard-spock-h1").style.display = "none"
+    document.getElementById("lizard-spock-h1").style.display = "none";
     document.getElementById("lizard-button").style.display = "none";
     document.getElementById("spock-button").style.display = "none";
     document.getElementById("lizard-rules").style.display = "none";
@@ -115,7 +115,7 @@ function showClassic() {
  * classic game related elements.
  */
 function showLizardSpock() {
-    document.getElementById("rock-paper-scissors-h1").style.display = "none"
+    document.getElementById("rock-paper-scissors-h1").style.display = "none";
     document.getElementById("classic-rules").style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "none";
     document.getElementsByClassName("main-area")[0].style.display = "flex";
@@ -170,13 +170,13 @@ function showRules() {
 
     closeSpan.onclick = function() {
         modal.style.display = "none";
-    }
+    };
 
     window.onclick = function(event) {
         if (event.target === modal) {
             modal.style.display = "none";
         }
-    }
+    };
 }
 
 /**
@@ -195,7 +195,7 @@ function showEndModal(showType) {
         if (showType === "end") {
             endGame();
         }
-    }
+    };
 
     window.onclick = function(event) {
         if (event.target === modal) {
@@ -205,7 +205,7 @@ function showEndModal(showType) {
                 endGame();
             }
         }
-    }
+    };
 
     if (showType === "quit") {
         document.getElementsByClassName("end-game")[0].style.display = "none";
@@ -303,7 +303,7 @@ function checkWinner(playerSelection, computerSelection) {
             if (rules[i].toLowerCase().indexOf(playerSelection) >= 0 && rules[i].toLowerCase().indexOf(computerSelection) >= 0) {
                 // when rule begins with player hand then player wins
                 if (rules[i].toLowerCase().indexOf(playerSelection) === 0) {
-                    afterTurnMessage.innerHTML = `Player wins! ${rules[i]}`
+                    afterTurnMessage.innerHTML = `Player wins! ${rules[i]}`;
                     previousWinner = "player";
                     previousPlayerSelection = playerSelection;
                     incrementPlayerScore();
@@ -365,8 +365,8 @@ function endGame() {
     computerScore.textContent = 0;
     document.getElementsByClassName("main-area")[0].style.display = "none";
     document.getElementsByClassName("main-menu-area")[0].style.display = "flex";
-    document.getElementById("lizard-spock-h1").style.display = "inline"
-    document.getElementById("rock-paper-scissors-h1").style.display = "inline"
+    document.getElementById("lizard-spock-h1").style.display = "inline";
+    document.getElementById("rock-paper-scissors-h1").style.display = "inline";
     document.getElementById("lizard-button").style.display = "inline-block";
     document.getElementById("spock-button").style.display = "inline-block";
     document.getElementById("classic-rules").style.display = "block";
