@@ -204,3 +204,17 @@ I also used [WAVE Evaluation Tool](https://wave.webaim.org/) on the site and eve
     - When in game the user can click on the rules button which will display the rules of the game. The rules show what hand each icon represents, which hands beat which hands, and that it's first to 5 who wins.
 - _As a user I would like to have a choice of difficulty levels:_
     - The user can choose between easy and hard difficulties upon landing on the site, and when they return to the main menu area after a game has finished or they have quit. On easy difficulty the computer's hand simply has a random outcome so in all cases the player can expect to win 50% of the time. On hard difficulty there is a pattern built in but still combined with an element of chance. If the pattern has been figured out and played against perfectly then the player can expect to win 60% of time when playing classic and 52% of the time when playing lizard spock. If the pattern is not known then the player can expect to win 45% of the time when playing classic and 46% of the time when playing lizard spock.
+
+### Bugs
+
+#### Fixed Bugs
+
+- Initially when a game had been completed and another one had been started the images of the hands were the same as how the previous game had ended. This was easily fixed by resetting the images to the rock image within the endGame function.
+
+- Another, similar issue occurred with the selection icons. Initially when a game had been completed and another one had been started the last icon selected by the player was still highlighted. This was similarly fixed by calling the resetIcons function within the endGame function.
+
+- When first deployed I noticed that whenever a previously not selected hand was selected, its image wasn't loading quickly enough. Simply put, the image was changing shortly after the animation had finished rather than during. This was fixed by preloading all of the images within the function that is called once the DOM content has finished loading.
+
+#### Unfixed Bugs
+
+- When playing on iPhone 7 (I assume, but don't know, this applies to all iPhones) the rules and end game modals can't be closed when clicking outside of the modal content. The close button must be used in this case.
