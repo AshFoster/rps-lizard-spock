@@ -192,3 +192,15 @@ The final lighthouse scores are as follows:
 
 I also used [WAVE Evaluation Tool](https://wave.webaim.org/) on the site and everything looks fine other than one contrast error issue. This relates to the difficulty toggle button. The labels which say easy and hard both have white text and a background colour of a light grey. Normally this would obviously cause a contrast issue, but in this case there is another div on top named "selector" which acts as the slider. This slider is blue and prevents the contrast issue from being present. When the slider moves the text changes to black which also prevents any contrast issues. I believe the evaluation tool hasn't picked this up.
 
+### User Goals Testing
+
+- _As a user I would like to play a game based on chance:_
+    - The website meets this goal as the user is able to play two versions of a game based on chance each of which can be played on two difficulties.
+- _As a user I would like to easily navigate across the website and have lots of feedback:_
+    - The user can immedietely see their options upon the site loading. They can choose to play the classic version of the game or the lizard spock version of the game, with the difficulty setting clearly visible too. When in game there is clear feedback about the outcome of each turn, as well as the ability to look at the rules and to quit the game if desired. The scores update correctly, and the players selected icon is highlighted during each turn. An animation is played to see the outcome of each turn where an image of the player's and computer's hand are shown. Once either the player or computer has won, a mssage displaying who won is displayed.
+- _As a user I would like the website to be visually appealing and have no colour clashes:_
+    - The colours of the site are simple and visually appealing. There are no contrast issues. 
+- _As a user I would like to be able to read about the rules of the game:_
+    - When in game the user can click on the rules button which will display the rules of the game. The rules show what hand each icon represents, which hands beat which hands, and that it's first to 5 who wins.
+- _As a user I would like to have a choice of difficulty levels:_
+    - The user can choose between easy and hard difficulties upon landing on the site, and when they return to the main menu area after a game has finished or they have quit. On easy difficulty the computer's hand simply has a random outcome so in all cases the player can expect to win 50% of the time. On hard difficulty there is a pattern built in but still combined with an element of chance. If the pattern has been figured out and played against perfectly then the player can expect to win 60% of time when playing classic and 52% of the time when playing lizard spock. If the pattern is not known then the player can expect to win 45% of the time when playing classic and 46% of the time when playing lizard spock.
