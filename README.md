@@ -279,8 +279,21 @@ The site has been deployed to GitHub pages. The steps followed in doing so are a
 - [GitHub](https://github.com/) - used as an online code repository and for deployment.
 - [Google Fonts](https://fonts.google.com/) - for the fonts used throughout the site.
 - [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
-- [Tony Florida's](https://tonyflorida.com/rock-paper-scissors-lizard-spock-rules/) - for the in game images.
 - [Online Image Resizer](https://resizeimage.net/) - for resizing images to improve site's performance.
 - [Eye Dropper](https://eyedropper.org/) - to find the hex code for the game images colour.
 - [Adobe's Colour Wheel](https://color.adobe.com/create/color-wheel) - to find the contrasting colours throughout the site.
 - [Colormind](http://colormind.io/) - used to obtain colour palette images.
+
+## Credits
+
+### Code
+
+- [YouTube](https://www.youtube.com/)
+  - [Self Teach Me](https://www.youtube.com/watch?v=LVPmYBgBdeM) - provided idea for the difficulty selector toggle switch.
+  - [Dev Ed](https://www.youtube.com/watch?v=qWPtKtYEsN4) - provided idea for animation implementation.
+- [Code Institute's Full Stack Developer Course](https://codeinstitute.net/)
+  - Course material and essentials walkthrough projects provided some ideas.
+
+### Media
+
+- [Tony Florida](https://tonyflorida.com/rock-paper-scissors-lizard-spock-rules/) - for the in game images.
