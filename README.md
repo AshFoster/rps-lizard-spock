@@ -205,6 +205,38 @@ I also used [WAVE Evaluation Tool](https://wave.webaim.org/) on the site and eve
 - _As a user I would like to have a choice of difficulty levels:_
     - The user can choose between easy and hard difficulties upon landing on the site, and when they return to the main menu area after a game has finished or they have quit. On easy difficulty the computer's hand simply has a random outcome so in all cases the player can expect to win 50% of the time. On hard difficulty there is a pattern built in but still combined with an element of chance. If the pattern has been figured out and played against perfectly then the player can expect to win 60% of time when playing classic and 52% of the time when playing lizard spock. If the pattern is not known then the player can expect to win 45% of the time when playing classic and 46% of the time when playing lizard spock.
 
+### Device and Browser Compatibility Testing
+
+To test the site's compatibility across a range of devices I used [Responsinator](https://www.responsinator.com/) and went through all of the user and owner goals on each device it includes in both portrait and landscape modes. The devices included are as follows:
+
+  - iPhone X
+  - Pixel 2
+  - iPhone 6-8
+  - iPhone 6-8 Large Version
+  - iPad
+
+Chrome Dev Tools was also used to check the site's compatibility across a range of other devices also in both portrait and landscape modes. These devices include:
+
+  - Ipad Pro
+  - Galaxy Fold (which has a very narrow viewport of only 280px in portrait mode)
+
+Actual mobile devices belonging to family and friends were also used for testing which include the following:
+
+  - iPhone 7
+  - Pixel 4
+  - S10 Plus
+
+A desktop monitor was also used for testing with a couple of different resolutions to check that the site remains to look and act as expected on larger screens. The resolutions were: 1366 x 768 and 1920 x 1080.
+
+Google Chrome was the browser used for the majority of testing during the development process, but once development had neared an end some other browsers were used for testing to make sure the site had cross browser compatibility. The full list of browsers used for testing are as follows:
+
+  - Chrome
+  - Internet Explorer 11
+  - Edge
+  - Firefox
+
+On all devices and browsers used for testing, whether real or simulated, the site looks and functions as expected, other than a small issue which is outlined in the [Bugs](#bugs) section below. Despite this, all of the user and owner goals are met to a standard I am happy with.
+
 ### Bugs
 
 #### Fixed Bugs
