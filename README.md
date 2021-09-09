@@ -261,3 +261,11 @@ The site has been deployed to GitHub pages. The steps followed in doing so are a
   5. This will cause the page to refresh, now displaying a ribbon indicating successful deployment with a link to the deployed site.
 
 [Here's a link to the live site.](https://ashfoster.github.io/rps-lizard-spock/)
+
+## Technologies Used
+
+### Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
