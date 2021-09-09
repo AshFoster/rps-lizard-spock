@@ -2,6 +2,8 @@
 
 [Click here to view the live site.](https://ashfoster.github.io/rps-lizard-spock/)
 
+![Am I Responsive Image](assets/images/am-i-responsive.jpg)
+
 ## Contents
 
 - [Overview](#overview)
