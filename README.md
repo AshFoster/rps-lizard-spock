@@ -250,3 +250,14 @@ On all devices and browsers used for testing, whether real or simulated, the sit
 #### Unfixed Bugs
 
 - When playing on iPhone 7 (I assume, but don't know, this applies to all iPhones) the rules and end game modals can't be closed when clicking outside of the modal content. The close button must be used in this case.
+
+## Deployment
+
+The site has been deployed to GitHub pages. The steps followed in doing so are as follows:
+  1. Go to the project's GitHub repository.
+  2. Select the Settings tab near the top of the page on the right hand side.
+  3. Scroll down to the Pages section, or select Pages from the list of options running down the left hand side.
+  4. Locate the Source section's drop-down menu and select the Master Branch (for some users it's Main rather than Master).
+  5. This will cause the page to refresh, now displaying a ribbon indicating successful deployment with a link to the deployed site.
+
+[Here's a link to the live site.](https://ashfoster.github.io/rps-lizard-spock/)
