@@ -271,3 +271,16 @@ The site has been deployed to GitHub pages. The steps followed in doing so are a
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Online Resources
+
+- [Git](https://en.wikipedia.org/wiki/Git) - for version control.
+- [GitPod](https://www.gitpod.io/) - the online IDE (Integrated Development Environment) used for development.
+- [GitHub](https://github.com/) - used as an online code repository and for deployment.
+- [Google Fonts](https://fonts.google.com/) - for the fonts used throughout the site.
+- [Font Awesome](https://fontawesome.com/) - for the icons used throughout the site.
+- [Tony Florida's](https://tonyflorida.com/rock-paper-scissors-lizard-spock-rules/) - for the in game images.
+- [Online Image Resizer](https://resizeimage.net/) - for resizing images to improve site's performance.
+- [Eye Dropper](https://eyedropper.org/) - to find the hex code for the game images colour.
+- [Adobe's Colour Wheel](https://color.adobe.com/create/color-wheel) - to find the contrasting colours throughout the site.
+- [Colormind](http://colormind.io/) - used to obtain colour palette images.
