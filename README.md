@@ -4,6 +4,29 @@
 
 ## Contents
 
+- [Overview](#overview)
+- [User Experience (UX)](#user-experience)
+    - [Strategy Plane](#strategy-plane)
+    - [Scope Plane](#scope-plane)
+    - [Structure Plane](#structure-plane)
+    - [Skeleton Plane](#skeleton-plane)
+    - [Surface Plane](#surface-plane)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+- [Testing](#testing)
+    - [Validator Testing](#validator-testing)
+    - [Performance Testing](#performance-testing)
+    - [User Goals Testing](#user-goals-testing)
+    - [Device and Browser Compatibility Testing](#device-and-browser-compatibility-testing)
+    - [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Online Resources](#online-resources)
+- [Credits](#credits)
+    - [Code](#code)
+    - [Media](#media)
+
 ## Overview
 
 This is a web based rock paper scissors game which includes an additional lizard spock version. The user can play either game, both of which can be played on easy or hard difficulties. It has been designed to be fun, easy to pick up and play, and to be responsive across a range of popular devices.
