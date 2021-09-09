@@ -235,7 +235,9 @@ Google Chrome was the browser used for the majority of testing during the develo
   - Edge
   - Firefox
 
-On all devices and browsers used for testing, whether real or simulated, the site looks and functions as expected, other than a small issue which is outlined in the [Bugs](#bugs) section below. Despite this, all of the user and owner goals are met to a standard I am happy with.
+On all devices and browsers (other than Internet Explorer) used for testing, whether real or simulated, the site looks and functions as expected, other than a small issue which is outlined in the [Unfixed Bugs](#unfixedbugs) section below. Despite this, all of the user and owner goals are met to a standard I am happy with.
+
+The webiste does not function correctly on Internet Explorer. The buttons on the main menu area don't respond when clicked. I'm not entirely sure of the exact reason, but feel it might be due to the limited compatibility with flexbox. I'm not too concerned about this though due to Microsoft officially depreciating Internet Explorer in favour of Microsoft Edge.
 
 ### Bugs
 
