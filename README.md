@@ -70,7 +70,7 @@ The main area section contains the following:
 - An icon area used by the player to select their hand.
 - A button area containing two buttons: one to show the rules and the other to quit the game.
 
-Originally the plan was to show the rules in a footer section at the bottom of the game screen. This can be seen in the [wireframes](#wireframes)) below. This idea was discarded during the development process to allow for more screen space for the game itself.
+Originally the plan was to show the rules in a footer section at the bottom of the game screen. This can be seen in the [wireframes](#wireframes) below. This idea was discarded during the development process to allow for more screen space for the game itself.
 
 The rules button displays a modal with the rules for the game currently being played (classic or lizard).
 
