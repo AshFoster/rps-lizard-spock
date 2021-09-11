@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // preload images to prevent any loading delay when playing game
     if (document.images) {
+        // CREDIT - preloading image code was found on https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/ 
         img1 = new Image();
         img2 = new Image();
         img3 = new Image();
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
         img3.src = "assets/images/scissors.png";
         img4.src = "assets/images/lizard.png";
         img5.src = "assets/images/spock.png";
+        // END OF CREDIT
     }
 });
 
